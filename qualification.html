@@ -20,6 +20,137 @@
 		  href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
 		/> -->
 		<title>Future plan</title>
+		<style>
+		    * {
+		        margin: 0;
+		        padding: 0;
+		        /* box-sizing: border-box; */
+		    }
+		
+		    .main {
+		        width: 100vw;
+		        height: 100vh;
+		        display: flex;
+		        position: relative;
+		        overflow: hidden;
+		    }
+		
+		    .iconfont {
+		        width: 80px;
+		        height: 80px;
+		        position: absolute;
+		        left: 27%;
+		        z-index: 999;
+		        font: 900 80px '';
+		        color: #5053fc;
+		    }
+		
+		    #up-btn {
+		        top: 10%;
+		    }
+		
+		    #down-btn {
+		        bottom: 10%;
+		    }
+		
+		    #content {
+		        width: 30%;
+		        height: 100%;
+		        position: absolute;
+		        left: 15%;
+		        overflow: hidden;
+		    }
+		
+		    .card {
+		        width: 100%;
+		        height: 100%;
+		        display: flex;
+		        flex-direction: column;
+		        justify-content: center;
+		        color: #5053fc;
+		        transition: transform .8s ease-in-out;
+		    }
+		
+		    .card-time {
+		        font-size: 40px;
+		        font-weight: 700;
+		    }
+		
+		    .card-title {
+		        font-size: 50px;
+		        font-weight: 500;
+		        padding-bottom: 10px;
+		        border-bottom: 1px solid white;
+		        margin-bottom: 10px;
+		    }
+		
+		    .card-passage {
+		        font-size: 24px;
+		        font-weight: 300;
+		    }
+		
+		    #clock {
+		        height: 130%;
+		        /* 纵横比为1:1 */
+		        aspect-ratio: 1 / 1;
+		        position: absolute;
+		        right: -28%;
+		        top: -15%;
+		        border-radius: 50%;
+		        background-color: white;
+		        border: #ff9214 30px solid;
+		    }
+		
+		    @media(max-width:1000px) {
+		        #clock {
+		            right: -90%;
+		        }
+		    }
+		
+		    #clock-table {
+		        width: 96%;
+		        height: 96%;
+		        border-radius: 50%;
+		        position: absolute;
+		        top: 2%;
+		        left: 2%;
+		        transition: transform .8s ease-in-out;
+		    }
+		
+		    .invisible-table {
+		        width: 100%;
+		        height: 100%;
+		        border-radius: 50%;
+		        transform-origin: 50% 50%;
+		        position: absolute;
+		    }
+		
+		    .clock-thick {
+		        width: 6%;
+		        height: 6px;
+		        background-color: #5053fc;
+		        position: absolute;
+		        top: calc(50% - 3px);
+		        left: 0px;
+		    }
+		
+		    .clock-thick span {
+		        font-size: 50px;
+		        position: absolute;
+		        left: 140%;
+		        top: calc(50% - 30px);
+		        color: #5053fc;
+		    }
+		
+		    .clock-scale {
+		        width: 4%;
+		        height: 2px;
+		        background-color: #5053fc;
+		        position: absolute;
+		        top: calc(50% - .5px);
+		        left: 0px;
+		    }
+		</style>
 	</head>
 	<body>
 		<!--==================== HEADER ====================-->
@@ -59,7 +190,7 @@
 		          </a>
 		        </li>
 		        <li class="nav__item">
-		          <a href="contact.html" class="nav__link">
+		          <a href="#contact" class="nav__link">
 		            <i class="uil uil-smile nav__icon"></i>
 		            <p i18n="contact">Contact me</p>
 		          </a>
@@ -80,149 +211,228 @@
 		          Future plan
 		        </h2>
 		        <span class="section__subtitle" i18n="qualification__subtitle"
-		          >My personal journey</span
-		        >
-		        <div class="qualification__container container">
-		          <div class="qualification__tabs">
-		            <div
-		              class="qualification__button button--flex qualification__active"
-		              data-target="#education"
-		            >
-		              <i class="uil uil-graduation-cap qualification__icon"></i>
-		              <span i18n="education">Education</span>
+		          >My personal journey</span>
+		<div class="main">
+				<i class="iconfont icon-arrow-up-bold" id="up-btn" onclick="slideToPrev()">🢕</i>
+				<i class="iconfont icon-arrow-down-bold" id="down-btn" onclick="slideToNext()">🢗</i>
+		    <div id="content">
+		        <div class="card">
+		            <div class="card-time">
+						
 		            </div>
-		
-		            <div class="qualification__button button--flex" data-target="#work">
-		              <i class="uil uil-briefcase-alt qualification__icon"></i>
-		              <span i18n="work">Work</span>
+		            <div class="card-title">
+		                Beijing University of Chemical Technology
 		            </div>
-		          </div>
-		          <div class="qualification__sections">
-		            <!--==================== QUALIFICATION CONTENT 1 ====================-->
-		            <div
-		              class="qualification__content qualification__active"
-		              data-content
-		              id="education"
-		            >
-		              <!--==================== QUALIFICATION 1 ====================-->
-		              <div class="qualification__data">
-		                <div>
-		                  <h3 class="qualification__title" i18n="qualification1__title">
-		                     Biological Engineering
-		                  </h3>
-		                  <span
-		                    class="qualification__subtitle"
-		                    i18n="qualification1__subtitle"
-		                    >Beijing University of Chemical Technology</span
-		                  >
-		                  <div class="qualification__calendar">
-		                    <i class="uil uil-calendar-alt"></i>
-		                    2023 - 2026
-		                  </div>
-		                </div>
-		
-		                <div>
-		                  <span class="qualification__rounder"></span>
-		                  <span class="qualification__line"></span>
-		                </div>
-		              </div>
-		              <!--==================== QUALIFICATION 2 ====================-->
-		              <div class="qualification__data">
-		                <div></div>
-		                <div>
-		                  <span class="qualification__rounder"></span>
-		                  <span class="qualification__line"></span>
-		                </div>
-		
-		                <div>
-		                  <h3 class="qualification__title" i18n="qualification2__title">
-		                    Bioprocess Engineering
-		                  </h3>
-		                  <span
-		                    class="qualification__subtitle"
-		                    i18n="qualification2__subtitle"
-		                    >ESF</span
-		                  >
-		                  <div class="qualification__calendar">
-		                    <i class="uil uil-calendar-alt"></i>
-		                    2026-2027
-		                  </div>
-		                </div>
-		              </div>
-			      <!--==================== QUALIFICATION 3 ====================-->
-		              <div class="qualification__data">
-		                <div>
-		                  <h3 class="qualification__title" i18n="qualification3__title">
-				    Biomedical Engineering
-		                  </h3>
-		                  <span
-		                    class="qualification__subtitle"
-		                    i18n="qualification3__subtitle"
-		                    >JHU</span
-		                  >
-		                  <div class="qualification__calendar">
-		  		    <i class="uil uil-calendar-alt"></i>
-				    2027-2032
-		                  </div>
-		                </div>
-		
-		                <div>
-		                  <span class="qualification__rounder"></span>
-		                  <!-- <span class="qualification__line"></span> -->
-		                </div>
-		              </div>
+		            <div class="card-passage">
+		                <br>
+		                Undergraduate, Biological Engineering
+		                <br>
+		                <br>
+		                I will complete my four-year undergraduate studies here
 		            </div>
-		
-		            <!--==================== QUALIFICATION CONTENT 2 ====================-->
-		            <div class="qualification__content" data-content id="work">
-		              <!--==================== QUALIFICATION 1 ====================-->
-		              <div class="qualification__data">
-		                <div></div>
-		                <div>
-		                  <span class="qualification__rounder"></span>
-		                  <!-- <span class="qualification__line"></span> -->
-		                </div>
-		                <div>
-		                  <h3 class="qualification__title" i18n="qualification4__title">
-		                    Quality Inspector
-		                  </h3>
-		                  <span
-		                    class="qualification__subtitle"
-		                    i18n="qualification4__subtitle"
-		                    >Henan, Nanyang</span
-		                  >
-		                  <div class="qualification__calendar">
-		                    <i class="uil uil-calendar-alt"></i>
-		                    2024
-		                  </div>
-		                </div>
-			      </div>
-		              <!--==================== QUALIFICATION 2 ====================-->
-		              <div class="qualification__data">
-		                <div></div>
-		                <div>
-		                  <span class="qualification__rounder"></span>
-		                  <!-- <span class="qualification__line"></span> -->
-		                </div>
-		                <div>
-		                  <h3 class="qualification__title" i18n="qualification5__title">
-		                    Biomedical Engineer
-		                  </h3>
-		                  <span
-		                    class="qualification__subtitle"
-		                    i18n="qualification4__subtitle"
-		                    >Shanghai</span
-		                  >
-		                  <div class="qualification__calendar">
-		                    <i class="uil uil-calendar-alt"></i>
-		                    2032-20XX
-		                  </div>
-		                </div>
-		              </div>
-		            </div>
-		          </div>
 		        </div>
-		      </section>
+		        <div class="card">
+		            <div class="card-time">
+
+		            </div>
+		            <div class="card-title">
+		                ESF
+		            </div>
+		            <div class="card-passage">
+		                <br>
+		                Sino foreign cooperation projects, Bioprocess Engineering
+		                <br>
+		                <br>
+		                In my final year of undergraduate studies, 
+						I will travel to the United States to complete one year of studies and life at ESF
+		            </div>
+		        </div>
+		        <div class="card">
+		            <div class="card-time">
+
+		            </div>
+		            <div class="card-title">
+		                JHU
+		            </div>
+		            <div class="card-passage">
+		                <br>
+		                Graduate and doctoral stages, Biomedical Engineering
+		                <br>
+		                <br>
+		                This is the university I have always dreamed of attending. 
+						I plan to complete my final graduate and doctoral studies here
+		            </div>
+		        </div>
+		        <div class="card">
+		            <div class="card-time">
+         
+		            </div>
+		            <div class="card-title">
+		                Institute of Biology, Chinese Academy of Sciences
+		            </div>
+		            <div class="card-passage">
+		                <br>
+		                Biomedical engineering or fermentation engineering
+		                <br>
+		                <br>
+		                The place I have always dreamed of, where I will embark on my research career 
+						and make my own contribution to the scientific development of humanity
+		            </div>
+		        </div>
+		    </div>
+		
+		    <div id="clock">
+		        <div id="clock-center"></div>
+		        <div id="clock-pointer"></div>
+		        <div id="clock-table"></div>
+		    </div>
+		</div>
+		<script>
+		    // 定义变量
+		    let offset = 0;
+		    let maxOffset = 0;
+		    let minOffset = -3;
+		    // 获取所有卡片元素并存储在数组中
+		    const slides = Array.from(document.querySelectorAll(".card"));
+		    // 获取时钟表盘元素
+		    const clock = document.querySelector("#clock-table");
+		    // 设定起始年份为2021
+		    let startYear = 2023;
+		    for (let i = -60, year = startYear - 1; i < 300; i += 6) {
+		        // 调用添加时钟刻度函数
+		        addClockScale(i);
+		        if (i % 60 === 0) {
+		            // 如果为整点时，调用添加粗刻度函数
+		            addThickClockScale(i, year);
+		            year++;
+		        }
+		    }
+		    // 添加时钟刻度
+		    function addClockScale(degree) {
+		        // 创建一个隐藏的表格元素
+		        const invisibleClockTable = document.createElement("div");
+		        // 添加类名
+		        invisibleClockTable.className = "invisible-table";
+		        // 设置旋转角度
+		        invisibleClockTable.style.transform = `rotate(${degree}deg)`;
+		        // 创建时钟刻度元素
+		        const clockScale = document.createElement("div");
+		        // 添加类名
+		        clockScale.className = "clock-scale";
+		        // 将时钟刻度元素添加到表格中
+		        invisibleClockTable.appendChild(clockScale);
+		        // 将表格添加到时钟表盘中
+		        clock.appendChild(invisibleClockTable);
+		    }
+		    // 添加粗刻度
+		    function addThickClockScale(degree, time) {
+		        // 创建一个隐藏的表格元素
+		        const invisibleClockTable = document.createElement("div");
+		        invisibleClockTable.className = "invisible-table";
+		        invisibleClockTable.style.transform = `rotate(${degree}deg)`;
+		        const thickClockScale = document.createElement("div");
+		        thickClockScale.className = "clock-thick";
+		        const scaleContent = document.createElement("span");
+		        scaleContent.textContent = `${time}`;
+		        thickClockScale.appendChild(scaleContent);
+		        invisibleClockTable.appendChild(thickClockScale);
+		        clock.appendChild(invisibleClockTable);
+		    }
+		    // 向前切换卡片
+		    function slideToPrev() {
+		        // 更新偏移量，取最大值
+		        offset = Math.min(maxOffset, offset + 1);
+		        slides.forEach(slide => {
+		            // 根据偏移量设置卡片垂直偏移效果
+		            slide.style.transform = `translateY(${offset * 100}%)`;
+		        });
+		        // 调用旋转时钟表盘函数
+		        clockRotate(offset * 60);
+		    }
+		    // 向后切换卡片
+		    function slideToNext() {
+		        offset = Math.max(minOffset, offset - 1);
+		        slides.forEach(slide => {
+		            slide.style.transform = `translateY(${offset * 100}%)`;
+		        });
+		        clockRotate(offset * 60);
+		    }
+		    // 旋转时钟表盘
+		    function clockRotate(degree) {
+		        // 根据角度旋转时钟表盘
+		        clock.style.transform = `rotate(${degree}deg)`;
+		    }
+		</script>
+
+		<!--==================== FOOTER ====================-->
+		<footer class="footer" id="contact">
+		  <div class="footer__bg">
+		    <div class="footer__container container grid">
+		      <div>
+		        <h1 class="footer__title">Guanlin Wang</h1>
+		        <span class="footer__subtitle" i18n="home__subtitle"
+		          >Bachelor of Engineering in Biological Engineering</span
+		        >
+		      </div>
+
+      <div>
+        <ul class="footer__links">
+          <li>
+            <a href="index.html" class="footer__link" i18n="home">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="footer__link" i18n="about">Resume</a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="footer__link" i18n="portfolio">Coursework</a>
+          </li>
+          <li>
+            <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
+          </li>
+          <li>
+            <a href="activities.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
+          </li>
+        </ul>
+        
+        <div class="footer__contact">
+          <div class="footer__contact-information">
+            <i class="uil uil-phone-alt footer__contact-icon"></i>
+            <div class="footer__contact-info">
+              <h3 class="footer__contact-title" i18n="tel">Call me</h3>
+              <span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
+            </div>
+          </div>
+
+          <div class="footer__contact-information">
+            <i class="uil uil-envelope footer__contact-icon"></i>
+            <div class="footer__contact-info">
+              <h3 class="footer__contact-title" i18n="email">E-mail</h3>
+              <span class="footer__contact-subtitle" i18n="email__address">wgl1162682844@163.com</span>
+            </div>
+          </div>
+
+          <div class="footer__contact-information">
+            <i class="uil uil-map-marker footer__contact-icon"></i>
+            <div class="footer__contact-info">
+              <h3 class="footer__contact-title" i18n="location">Location</h3>
+              <span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+		    <p class="footer__copy">
+		      &#169; Guanlin Wang.Copy from
+		      <a
+		        class="footer__copy"
+		        href="https://www.youtube.com/c/Bedimcode"
+		        target="_blank"
+		        >Bedimcode</a
+		      >
+		    </p>
+		  </div>
+		</footer>
+
 		<!--==================== SCROLL TOP ====================-->
 		<a href="#" class="scrollup" id="scroll-up">
 		  <i class="uil uil-arrow-up scrollup__icon"></i>

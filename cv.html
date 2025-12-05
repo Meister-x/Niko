@@ -59,7 +59,7 @@
 		          </a>
 		        </li>
 		        <li class="nav__item">
-		          <a href="contact.html" class="nav__link">
+		          <a href="#contact" class="nav__link">
 		            <i class="uil uil-smile nav__icon"></i>
 		            <p i18n="contact">Contact me</p>
 		          </a>
@@ -81,118 +81,88 @@
 		    <meta charset="UTF-8">
 		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		    <title>Document</title>
+		    <title>CV</title>
 		    <style>
-		        * {
-		            margin: 0;
-		            padding: 0;
-		        }
-		
-		        body {
-		            display: flex;
-		            justify-content: center;
-		            align-items: center;
-		            min-height: 100vh;
-		        }
-		
-		        .shell {
-		            position: relative;
-		            min-width: 1000px;
-		            display: flex;
-		            justify-content: center;
-		            flex-wrap: wrap;
-		            /* 设置3d变化 */
-		            transform-style: preserve-3d;
-		            /* 添加透视效果 */
-		            perspective: 900px;
-		        }
-		
-		        .shell .box {
-		            position: relative;
-		            width: 250px;
-		            height: 350px;
-		            transition: 0.3s;
-		            overflow: hidden;
-		            margin: 30px;
-		            transform: rotateY(0deg);
-		            transition-delay: .1s;
-		            border-radius: 5px;
-		            border: #fff 5px solid;
-		        }
-		
-		        /* 当鼠标所有卡片的父元素点shell上时，
-		        所有卡片像Y轴翻转20度 */
-		        .shell:hover .box {
-		            transform: rotateY(20deg);
-		        }
-		
-		        /* 当鼠标悬浮在当前卡片上时，当前卡片的翻转角度为0，
-		        并放大一点二五倍，加个阴影 */
-		        .shell .box:hover {
-		            transform: rotateY(0deg) scale(2.25);
-		            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
-		            z-index: 1;
-		        }
-		
-		        /* 当鼠标悬浮在卡片上时，
-		        当前卡片后面的所有卡片全部都反向翻转负20度 */
-		        .shell .box:hover~.box {
-		            transform: rotateY(-20deg);
-		        }
-		
-		        .shell .box .images img {
-		            width: 100%;
-		        }
-		
-		        .shell .box .content {
-		            position: absolute;
-		            top: 0;
-		            width: 90%;
-		            height: 100%;
-		            z-index: 999;
-		            padding: 15px;
-		        }
-		
-		        .shell .box .content h2 {
-		            color: rgb(210, 140, 140);
-		            transition: 0.3s;
-		            font-size: 20px;
-		            transform: translateY(-100px);
-		        }
-		
-		        .shell .box:hover .content h2 {
-		            transform: translateY(-15px);
-		        }
-		
-		        .shell .box .content p {
-		            color: rgb(0, 0, 0);
-		            transition: 0.3s;
-		            font-size: 20px;
-		            transform: translateY(600px);
-		            background-color: rgba(255, 255, 255, 0.7);
-		        }
-		
-		        .shell .box:hover .content p {
-		            transform: translateY(220px);
-		        }
+    		.pdf-block{max-width:900px; margin:18px auto 24px; padding-top:80px; display:flex; flex-direction:column; align-items:center; justify-content:center}
+    		.pdf-viewer{width:100%; height:800px; border:0; background:#fafafa; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,.06)}
+    		.pdf-tip{font-size:12px; color:#666; margin-top:6px}
 		    </style>
 		</head>
 		
 		<body>
-		    <div class="shell">
-		        <div class="box">
-		            <div class="images">
-		                <img src="./image/1.png">
-		            </div>
-		        </div>
-		        <div class="box">
-		            <div class="images">
-		                <img src="./image/2.png">
-		            </div>
-		            <div class="content">
-		            </div>
-		</body>
+			<div class="pdf-block">
+				<iframe class="pdf-viewer" src="assets\pdf\cv.pdf#zoom=80" title="kepu PDF"></iframe>
+	  </div>
+		<!--==================== FOOTER ====================-->
+		<footer class="footer" id="contact">
+		  <div class="footer__bg">
+		    <div class="footer__container container grid">
+		      <div>
+		        <h1 class="footer__title">Guanlin Wang</h1>
+		        <span class="footer__subtitle" i18n="home__subtitle"
+		          >Bachelor of Engineering in Biological Engineering</span
+		        >
+		      </div>
+
+      <div>
+        <ul class="footer__links">
+          <li>
+            <a href="index.html" class="footer__link" i18n="home">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="footer__link" i18n="about">Resume</a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="footer__link" i18n="portfolio">Coursework</a>
+          </li>
+          <li>
+            <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
+          </li>
+          <li>
+            <a href="activities.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
+          </li>
+        </ul>
+        
+        <div class="footer__contact">
+          <div class="footer__contact-information">
+            <i class="uil uil-phone-alt footer__contact-icon"></i>
+            <div class="footer__contact-info">
+              <h3 class="footer__contact-title" i18n="tel">Call me</h3>
+              <span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
+            </div>
+          </div>
+
+          <div class="footer__contact-information">
+            <i class="uil uil-envelope footer__contact-icon"></i>
+            <div class="footer__contact-info">
+              <h3 class="footer__contact-title" i18n="email">E-mail</h3>
+              <span class="footer__contact-subtitle" i18n="email__address">wgl1162682844@163.com</span>
+            </div>
+          </div>
+
+          <div class="footer__contact-information">
+            <i class="uil uil-map-marker footer__contact-icon"></i>
+            <div class="footer__contact-info">
+              <h3 class="footer__contact-title" i18n="location">Location</h3>
+              <span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+		    <p class="footer__copy">
+		      &#169; Guanlin Wang.Copy from
+		      <a
+		        class="footer__copy"
+		        href="https://www.youtube.com/c/Bedimcode"
+		        target="_blank"
+		        >Bedimcode</a
+		      >
+		    </p>
+		  </div>
+		</footer>
 		
+		</body>
 		</html>
 		<!--==================== SCROLL TOP ====================-->
 		<a href="#" class="scrollup" id="scroll-up">
