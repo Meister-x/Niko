@@ -9,15 +9,9 @@
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
 	<!--==================== SWIPER CSS ====================-->
 	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-
 	<!--==================== CSS ====================-->
 	<link rel="stylesheet" href="assets/css/styles.css" />
-	<!-- iconfont font class 方式引用图标 -->
-	<!-- <link
-		  rel="stylesheet"
-		  href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
-		/> -->
-	<title>Contact</title>
+	<title>Laboratory Projects</title>
 </head>
 
 <body>
@@ -39,9 +33,8 @@
 							<p i18n="about">Resume</p>
 						</a>
 					</li>
-					<li class="nav__item">
 					<li class="nav__item nav__item--dropdown">
-						<a href="#" class="nav__link">
+						<a href="#" class="nav__link active-link">
 							<i class="uil uil-book nav__icon"></i>
 							<p i18n="portfolio">Coursework</p>
 							<i class="uil uil-angle-down nav__dropdown-icon"></i>
@@ -51,14 +44,12 @@
 							<li><a href="lab-projects.html"><i class="uil uil-flask"></i> Laboratory Projects</a></li>
 						</ul>
 					</li>
-					</li>
 					<li class="nav__item">
 						<a href="qualification.html" class="nav__link">
 							<i class="uil uil-rocket nav__icon"></i>
 							<p i18n="qualification">Future Plan</p>
 						</a>
 					</li>
-					<li class="nav__item">
 					<li class="nav__item nav__item--dropdown">
 						<a href="#" class="nav__link">
 							<i class="uil uil-smile nav__icon"></i>
@@ -70,7 +61,6 @@
 							<li><a href="sn.html"><i class="uil uil-mountains"></i> Sports & Nature</a></li>
 							<li><a href="cs.html"><i class="uil uil-game"></i> Counter Strike</a></li>
 						</ul>
-					</li>
 					</li>
 					<li class="nav__item">
 						<a href="#contact" class="nav__link">
@@ -88,43 +78,99 @@
 			</div>
 		</nav>
 	</header>
-	<!--==================== CONTACT ME ====================-->
-	<section class="contact section" id="contact">
-		<h2 class="section__title" i18n="contact__title">Contact me</h2>
-		<span class="section__subtitle" i18n="contact__subtitle">Get in touch</span>
-
-		<div class="contact__container container grid">
-			<div>
-				<div class="contact__information">
-					<i class="uil uil-phone-alt contact__icon"></i>
-
-					<div>
-						<h3 class="contact__title" i18n="tel">Call me</h3>
-						<span class="contact__subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
-					</div>
-				</div>
-
-				<div class="contact__information">
-					<i class="uil uil-envelope contact__icon"></i>
-
-					<div>
-						<h3 class="contact__title" i18n="email">E-mail</h3>
-						<span class="contact__subtitle" i18n="email__address">wgl1162682844@163.com</span>
-					</div>
-				</div>
-
-				<div class="contact__information">
-					<i class="uil uil-map-marker contact__icon"></i>
-
-					<div>
-						<h3 class="contact__title" i18n="location">Location</h3>
-						<span class="contact__subtitle" i18n="location__detail">Beijing , CHN</span>
-					</div>
-				</div>
+	<!--==================== PAGE WRAPPER ====================-->
+	<div class="page-wrapper container">
+		<!-- 侧边栏 -->
+		<aside class="page-sidebar" aria-label="Laboratory Projects sidebar">
+			<div class="page-sidebar-inner">
+				<h4 class="page-sidebar-title">Laboratory Projects</h4>
+				<nav class="page-toc">
+					<a href="#nasal-spray" class="toc-item">
+						<i class="uil uil-flask toc-icon"></i>
+						<span>Nasal Spray R&D</span>
+					</a>
+					<a href="#brown-rice" class="toc-item">
+						<i class="uil uil-flask toc-icon"></i>
+						<span>Brown Rice Yeast</span>
+					</a>
+					<a href="#top" class="toc-item">
+						<i class="uil uil-arrow-up toc-icon"></i>
+						<span>Back to top</span>
+					</a>
+				</nav>
 			</div>
+		</aside>
+		<!-- 内容区域 -->
+		<div class="page-content">
+			<!--==================== LABORATORY PROJECTS ====================-->
+			<section class="portfolio section" id="portfolio">
+				<h2 class="section__title">Laboratory Projects</h2>
+				<span class="section__subtitle">Research & Development Projects</span>
+				
+				<!-- Project 1: Human Nasal Mucosa Moisturizing Spray R&D Project -->
+				<div class="coursework__project" id="nasal-spray">
+					<div class="coursework__hero">
+						<div class="coursework__slide" id="slide-nasal-spray">
+							<div class="coursework__item" style="background-image: url('17.jpg');"></div>
+						</div>
+						<div class="coursework__controls">
+							<button class="coursework__prev" data-slide="slide-nasal-spray">
+								<i class="uil uil-angle-left"></i>
+							</button>
+							<button class="coursework__next" data-slide="slide-nasal-spray">
+								<i class="uil uil-angle-right"></i>
+							</button>
+						</div>
+					</div>
+					<div class="coursework__details">
+						<h3 class="coursework__title">Human Nasal Mucosa Moisturizing Spray R&D Project</h3>
+						<div class="coursework__meta">
+							<span><i class="uil uil-user"></i> Research Assistant</span>
+							<span><i class="uil uil-map-marker"></i> Laboratory</span>
+							<span><i class="uil uil-calendar-alt"></i> 2024-2025</span>
+						</div>
+						<div class="coursework__description">
+							<p><strong>Project Overview:</strong> Research and development of a moisturizing spray for human nasal mucosa, focusing on formulation optimization and efficacy testing.</p>
+							<p><strong>Role:</strong> Research assistant responsible for experimental design, sample preparation, and data collection.</p>
+							<p><strong>Key Achievements:</strong> Successfully developed prototype formulations and conducted preliminary efficacy studies.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Project 2: Brown Rice Yeast Screening and GABA Metabolism Research -->
+				<div class="coursework__project" id="brown-rice">
+					<div class="coursework__hero">
+						<div class="coursework__slide" id="slide-brown-rice">
+							<div class="coursework__item" style="background-image: url('1.jpg');"></div>
+							<div class="coursework__item" style="background-image: url('2.jpg');"></div>
+							<div class="coursework__item" style="background-image: url('3.jpg');"></div>
+						</div>
+						<div class="coursework__controls">
+							<button class="coursework__prev" data-slide="slide-brown-rice">
+								<i class="uil uil-angle-left"></i>
+							</button>
+							<button class="coursework__next" data-slide="slide-brown-rice">
+								<i class="uil uil-angle-right"></i>
+							</button>
+						</div>
+					</div>
+					<div class="coursework__details">
+						<h3 class="coursework__title">Brown Rice Yeast Screening and GABA Metabolism Research</h3>
+						<div class="coursework__meta">
+							<span><i class="uil uil-user"></i> Research Assistant</span>
+							<span><i class="uil uil-map-marker"></i> Laboratory</span>
+							<span><i class="uil uil-calendar-alt"></i> 2024-2025</span>
+						</div>
+						<div class="coursework__description">
+							<p><strong>Project Overview:</strong> Screening and characterization of yeast strains for brown rice fermentation, with focus on GABA (gamma-aminobutyric acid) metabolism pathways.</p>
+							<p><strong>Role:</strong> Research assistant involved in strain screening, fermentation experiments, and metabolic analysis.</p>
+							<p><strong>Key Achievements:</strong> Identified promising yeast strains and characterized their GABA production capabilities.</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
-	</section>
-	</main>
+	</div>
 
 	<!--==================== FOOTER ====================-->
 	<footer class="footer" id="contact">
@@ -189,13 +235,13 @@
 			</p>
 		</div>
 	</footer>
+
 	<!--==================== SCROLL TOP ====================-->
 	<a href="#" class="scrollup" id="scroll-up">
 		<i class="uil uil-arrow-up scrollup__icon"></i>
 	</a>
 	<!--==================== SWIPER JS ====================-->
 	<script src="assets/js/swiper-bundle.min.js"></script>
-
 	<!-- iconfont JS -->
 	<script src="assets/js/iconfont.js"></script>
 	<!-- jquery -->
@@ -203,6 +249,9 @@
 	<script src="assets/js/jquery.i18n.min.js"></script>
 	<!--==================== MAIN JS ====================-->
 	<script src="assets/js/main.js"></script>
+	<!--==================== SCRIPT JS ====================-->
+	<script src="assets/js/script.js"></script>
 </body>
 
 </html>
+

@@ -448,3 +448,85 @@ if (document.readyState === 'loading') {
 } else {
   initScrollAnimations();
 }
+
+/*==================== SNOW EFFECT ====================*/
+/**
+ * 下雪特效
+ * 创建优雅的雪花飘落动画，不影响页面交互
+ */
+function createSnowflake(startFromTop = false) {
+  const snowContainer = document.getElementById('snow-container');
+  if (!snowContainer) return;
+
+  const snowflake = document.createElement('div');
+  snowflake.className = 'snowflake';
+  snowflake.innerHTML = '❄';
+  
+  // 随机起始位置
+  snowflake.style.left = Math.random() * 100 + '%';
+  
+  // 如果从顶部开始，设置随机起始高度（使用负值或小的正值，确保从屏幕上方开始）
+  if (startFromTop) {
+    // 从屏幕上方-50px到-10px的位置开始，确保从视野外开始
+    const startTop = -50 - Math.random() * 40; // -50px 到 -10px
+    snowflake.style.top = startTop + 'px';
+  } else {
+    // 新创建的雪花从屏幕顶部开始
+    snowflake.style.top = '-10px';
+  }
+  
+  // 随机动画持续时间 - 减慢下落速度
+  const duration = 18 + Math.random() * 8; // 18-26秒，更慢的下落速度
+  snowflake.style.animationDuration = duration + 's';
+  
+  // 移除延迟，让雪花立即开始动画
+  snowflake.style.animationDelay = '0s';
+  
+  // 随机水平移动距离
+  const translateX = (Math.random() - 0.5) * 200;
+  snowflake.style.setProperty('--translate-x', translateX + 'px');
+  
+  snowContainer.appendChild(snowflake);
+  
+  // 动画结束后移除元素
+  setTimeout(() => {
+    if (snowflake.parentNode) {
+      snowflake.parentNode.removeChild(snowflake);
+    }
+  }, duration * 1000);
+}
+
+/**
+ * 初始化下雪特效
+ * 只在首页显示，控制雪花数量以保持性能
+ */
+function initSnowEffect() {
+  // 只在首页显示雪花
+  const isHomePage = window.location.pathname.endsWith('index.html') || 
+                     window.location.pathname.endsWith('/') ||
+                     window.location.pathname === '';
+  
+  if (!isHomePage) return;
+  
+  const snowContainer = document.getElementById('snow-container');
+  if (!snowContainer) return;
+  
+  // 立即创建初始雪花 - 从屏幕不同位置开始，立即显示
+  const snowflakeCount = 30; // 增加雪花数量，使其更密集
+  for (let i = 0; i < snowflakeCount; i++) {
+    // 立即创建，不延迟，让雪花从屏幕上方不同位置开始
+    createSnowflake(true);
+  }
+  
+  // 持续创建新雪花，保持较高的雪花密度
+  setInterval(() => {
+    createSnowflake(false); // 新创建的雪花从顶部开始
+  }, 300); // 每0.3秒创建一个新雪花，增加密度
+}
+
+// 页面加载完成后初始化下雪特效
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSnowEffect);
+} else {
+  initSnowEffect();
+}

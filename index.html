@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <!--==================== UNICONS 图标====================-->
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
-    />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
     <!--==================== SWIPER CSS ====================-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
@@ -22,7 +20,11 @@
 
     <title>Wang's Portfolio</title>
   </head>
+
   <body>
+    <!--==================== SNOW EFFECT ====================-->
+    <div class="snow-container" id="snow-container"></div>
+    
     <!--==================== HEADER ====================-->
     <header class="header scroll-header" id="header">
       <nav class="nav container">
@@ -41,11 +43,16 @@
                 <p i18n="about">Resume</p>
               </a>
             </li>
-            <li class="nav__item">
-              <a href="portfolio.html" class="nav__link">
+          <li class="nav__item nav__item--dropdown">
+            <a href="#" class="nav__link">
                 <i class="uil uil-book nav__icon"></i>
                 <p i18n="portfolio">Coursework</p>
+              <i class="uil uil-angle-down nav__dropdown-icon"></i>
               </a>
+            <ul class="nav__dropdown">
+              <li><a href="competitions.html"><i class="uil uil-trophy"></i> Competitions</a></li>
+              <li><a href="lab-projects.html"><i class="uil uil-flask"></i> Laboratory Projects</a></li>
+            </ul>
             </li>
             <li class="nav__item">
               <a href="qualification.html" class="nav__link">
@@ -53,11 +60,17 @@
                 <p i18n="qualification">Future Plan</p>
               </a>
             </li>
-            <li class="nav__item">
-              <a href="activities.html" class="nav__link">
+          <li class="nav__item nav__item--dropdown">
+            <a href="#" class="nav__link">
                 <i class="uil uil-smile nav__icon"></i>
                 <p i18n="activities">Activities & Hobby</p>
+              <i class="uil uil-angle-down nav__dropdown-icon"></i>
               </a>
+            <ul class="nav__dropdown">
+              <li><a href="experiment.html"><i class="uil uil-flask"></i> Experiment</a></li>
+              <li><a href="sn.html"><i class="uil uil-mountains"></i> Sports & Nature</a></li>
+              <li><a href="cs.html"><i class="uil uil-game"></i> Counter Strike</a></li>
+            </ul>
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">
@@ -84,35 +97,21 @@
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__social">
-              <a
-                href="https://space.bilibili.com/192365559?spm_id_from=333.1365.0.0"
-                target="_blank"
-                class="home__social-icon"
-              >
+            <a href="https://space.bilibili.com/192365559?spm_id_from=333.1365.0.0" target="_blank"
+              class="home__social-icon">
                 <!-- <i class="uil uil-dribbble"></i> -->
-                <svg
-                  t="1674801734735"
-                  viewBox="0 0 1024 1024"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  p-id="4124"
-                >
+              <svg t="1674801734735" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="4124">
                   <path
                     d="M777.514667 131.669333a53.333333 53.333333 0 0 1 0 75.434667L728.746667 255.829333h49.92A160 160 0 0 1 938.666667 415.872v320a160 160 0 0 1-160 160H245.333333A160 160 0 0 1 85.333333 735.872v-320a160 160 0 0 1 160-160h49.749334L246.4 207.146667a53.333333 53.333333 0 1 1 75.392-75.434667l113.152 113.152c3.370667 3.370667 6.186667 7.04 8.448 10.965333h137.088c2.261333-3.925333 5.12-7.68 8.490667-11.008l113.109333-113.152a53.333333 53.333333 0 0 1 75.434667 0z m1.152 231.253334H245.333333a53.333333 53.333333 0 0 0-53.205333 49.365333l-0.128 4.010667v320c0 28.117333 21.76 51.157333 49.365333 53.162666l3.968 0.170667h533.333334a53.333333 53.333333 0 0 0 53.205333-49.365333l0.128-3.968v-320c0-29.44-23.893333-53.333333-53.333333-53.333334z m-426.666667 106.666666c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z m320 0c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z"
-                    fill="hsl(250deg 69% 61%)"
-                    p-id="4125"
-                  ></path>
+                  fill="hsl(250deg 69% 61%)" p-id="4125"></path>
                 </svg>
               </a>
             </div>
 
             <div class="home__img">
               <div class="home__avatar">
-                <img
-                  class="home__avatar-img"
-                  src="assets/img/cat.png"
-                  alt="Guanlin Wang"
-                />
+              <img class="home__avatar-img" src="assets/img/cat.png" alt="Guanlin Wang" />
               </div>
             </div>
 
@@ -148,9 +147,7 @@
           <div class="home__scroll">
             <a href="about.html" class="home__scroll-button button--flex">
               <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
-              <span class="home__scroll-name" i18n="home__scroll-name"
-                >See more</span
-              >
+            <span class="home__scroll-name" i18n="home__scroll-name">See more</span>
               <i class="uil uil-arrow-down home__scroll-arrow"></i>
             </a>
           </div>
@@ -164,9 +161,7 @@
         <div class="footer__container container grid">
           <div>
             <h1 class="footer__title">Guanlin Wang</h1>
-            <span class="footer__subtitle" i18n="home__subtitle"
-              >Bachelor of Engineering in Biological Engineering</span
-            >
+          <span class="footer__subtitle" i18n="home__subtitle">Bachelor of Engineering in Biological Engineering</span>
           </div>
 
           <div>
@@ -178,13 +173,13 @@
                 <a href="about.html" class="footer__link" i18n="about">Resume</a>
               </li>
               <li>
-                <a href="portfolio.html" class="footer__link" i18n="portfolio">Coursework</a>
+              <a href="competitions.html" class="footer__link" i18n="portfolio">Coursework</a>
               </li>
               <li>
                 <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
               </li>
               <li>
-                <a href="activities.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
+              <a href="experiment.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
               </li>
             </ul>
             
@@ -217,12 +212,7 @@
         </div>
         <p class="footer__copy">
           &#169; Guanlin Wang.Copy from
-          <a
-            class="footer__copy"
-            href="https://www.youtube.com/c/Bedimcode"
-            target="_blank"
-            >Bedimcode</a
-          >
+        <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
         </p>
       </div>
     </footer>
@@ -242,4 +232,5 @@
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
   </body>
+
 </html>

@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<!--==================== UNICONS 图标====================-->
-		<link
-		  rel="stylesheet"
-		  href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
-		/>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
 		<!--==================== SWIPER CSS ====================-->
 		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 		
@@ -21,6 +19,7 @@
 		/> -->
 		<title>Resume</title>
 	</head>
+
 	<body>
 		<!--==================== HEADER ====================-->
 		<header class="header scroll-header" id="header">
@@ -40,11 +39,16 @@
 		            <p i18n="about">Resume</p>
 		          </a>
 		        </li>
-		        <li class="nav__item">
-		          <a href="portfolio.html" class="nav__link">
+          <li class="nav__item nav__item--dropdown">
+            <a href="#" class="nav__link">
 		            <i class="uil uil-book nav__icon"></i>
 		            <p i18n="portfolio">Coursework</p>
+              <i class="uil uil-angle-down nav__dropdown-icon"></i>
 		          </a>
+            <ul class="nav__dropdown">
+              <li><a href="competitions.html"><i class="uil uil-trophy"></i> Competitions</a></li>
+              <li><a href="lab-projects.html"><i class="uil uil-flask"></i> Laboratory Projects</a></li>
+            </ul>
 		        </li>
 		        <li class="nav__item">
 		          <a href="qualification.html" class="nav__link">
@@ -52,11 +56,17 @@
 		            <p i18n="qualification">Future Plan</p>
 		          </a>
 		        </li>
-		        <li class="nav__item">
-		          <a href="activities.html" class="nav__link">
+          <li class="nav__item nav__item--dropdown">
+            <a href="#" class="nav__link">
 		            <i class="uil uil-smile nav__icon"></i>
 		            <p i18n="activities">Activities & Hobby</p>
+              <i class="uil uil-angle-down nav__dropdown-icon"></i>
 		          </a>
+            <ul class="nav__dropdown">
+              <li><a href="experiment.html"><i class="uil uil-flask"></i> Experiment</a></li>
+              <li><a href="sn.html"><i class="uil uil-mountains"></i> Sports & Nature</a></li>
+              <li><a href="cs.html"><i class="uil uil-game"></i> Counter Strike</a></li>
+            </ul>
 		        </li>
 		        <li class="nav__item">
 		          <a href="#contact" class="nav__link">
@@ -77,64 +87,35 @@
 		<!--==================== ABOUT ====================-->
 		  <section class="about section" id="about">
 		    <h2 class="section__title" i18n="about__title">Resume</h2>
-		    <span class="section__subtitle" i18n="about__subtitle"
-		      >My introduction</span
-		    >
-		    <div class="page-wrapper container">
-		      <!-- 侧边栏 -->
-		      <aside class="page-sidebar" aria-label="Resume sidebar">
-		        <div class="page-sidebar-inner">
-		          <h4 class="page-sidebar-title">Resume</h4>
-		          <nav class="page-toc">
-		            <a href="#about" class="toc-item">
-		              <i class="uil uil-user toc-icon"></i>
-		              <span>Introduction</span>
-		            </a>
-		            <a href="#skills" class="toc-item">
-		              <i class="uil uil-brackets-curly toc-icon"></i>
-		              <span>Skills</span>
-		            </a>
-		            <a href="#top" class="toc-item">
-		              <i class="uil uil-arrow-up toc-icon"></i>
-		              <span>Back to top</span>
-		            </a>
-		          </nav>
-		        </div>
-		      </aside>
-		      <!-- 内容区域 -->
-		      <div class="page-content">
+        <span class="section__subtitle" i18n="about__subtitle">My introduction</span>
 		    <div class="about__container container grid">
 		      <img src="assets/img/about.png" alt="" class="about__img" />
 		
 		      <div class="about__data">
 		        <p class="about__description" i18n="about__description">
-		        A dedicated bioengineering student with four research experiences, including iGEM competition and national innovation projects, 
-		one quality management internship experience, and strong technical skills in programming and web development.
+              A dedicated bioengineering student with four research experiences, including iGEM competition and national
+              innovation projects,
+              one quality management internship experience, and strong technical skills in programming and web
+              development.
 		        </p>
 		
 		        <div class="about__info">
 		          <div>
-		            <span class="about__info-title"><span class="count" data-end="2" data-decimals="0"></span>+</span>
-		            <span class="about__info-name" i18n="about__info-name1"
-		              >Years of <br />
-		              experience</span
-		            >
+                <span class="about__info-title"><span class="count" data-end="2" data-decimals="0"></span>+</span>
+                <span class="about__info-name" i18n="about__info-name1">Years of <br />
+                  experience</span>
 		          </div>
 		
 		          <div>
-		            <span class="about__info-title"><span class="count" data-end="5" data-decimals="0"></span>+</span>
-		            <span class="about__info-name" i18n="about__info-name2"
-		              >Related <br />
-		              projects</span
-		            >
+                <span class="about__info-title"><span class="count" data-end="5" data-decimals="0"></span>+</span>
+                <span class="about__info-name" i18n="about__info-name2">Related <br />
+                  projects</span>
 		          </div>
 		
 		          <div>
-		            <span class="about__info-title"><span class="count" data-end="1" data-decimals="0"></span>+</span>
-		            <span class="about__info-name" i18n="about__info-name3"
-		              >Companies <br />
-		              worked</span
-		            >
+                <span class="about__info-title"><span class="count" data-end="1" data-decimals="0"></span>+</span>
+                <span class="about__info-name" i18n="about__info-name3">Companies <br />
+                  worked</span>
 		          </div>
 		        </div>
 		
@@ -143,18 +124,13 @@
 		           <span i18n="home__contact">See more details</span>
 		           <i class="uil uil-message button__icon"></i>
 		         </a>
+            </div>
 		        </div>
 		      </div>
 		    </div>
-		      </div>
-		    </div>
 		  </section>
-		  <section class="skills section" id="skills">
-		    <span class="section__subtitle" i18n="skills__subtitle"
-		      >My technical level</span
-		    >
-		    <div class="page-wrapper container">
-		      <div class="page-content">
+    <section class="skills section" id="skills">
+      <span class="section__subtitle" i18n="skills__subtitle">My technical level</span>
 		    <div class="skills__container container grid">
 		      <div>
             <!--==================== SKILLS 1 ====================-->
@@ -166,9 +142,7 @@
                   <h1 class="skills__title" i18n="home__subtitle">
                    Theoretical experience
                   </h1>
-                  <span class="skills__subtitle" i18n="skills__years"
-                    >More than 5 years</span
-                  >
+                <span class="skills__subtitle" i18n="skills__years">More than 5 years</span>
                 </div>
               </div>
 
@@ -179,7 +153,7 @@
                     <span class="skills__number">60%</span>
                   </div>
                   <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="60"></div>
+                  <div class="skills__percentage" data-percentage="60"></div>
                   </div>
                 </div>
 
@@ -189,7 +163,7 @@
                     <span class="skills__number">50%</span>
                   </div>
                   <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="50"></div>
+                  <div class="skills__percentage" data-percentage="50"></div>
                   </div>
                 </div>
 
@@ -199,7 +173,7 @@
                     <span class="skills__number">30%</span>
                   </div>
                   <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="30"></div>
+                  <div class="skills__percentage" data-percentage="30"></div>
                   </div>
                 </div>
 
@@ -209,14 +183,14 @@
                     <span class="skills__number">30%</span>
                   </div>
                   <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="30"></div>
+                  <div class="skills__percentage" data-percentage="30"></div>
                   </div>
                 </div>
                 </div>
               </div>
             </div>
             <!--==================== SKILLS 2 ====================-->
-            <div class="skills__content skills__open">
+        <div class="skills__content skills__open">
               <div class="skills__header">
                 <i class="uil uil-server-network skills__icon"></i>
 
@@ -224,9 +198,7 @@
                   <h1 class="skills__title" i18n="skills__title2">
                     Technical Skills
                   </h1>
-                  <span class="skills__subtitle" i18n="skills__years2"
-                    >Proficient & Experienced</span
-                  >
+              <span class="skills__subtitle" i18n="skills__years2">Proficient & Experienced</span>
                 </div>
               </div>
 
@@ -237,7 +209,7 @@
                     <span class="skills__number">90%</span>
                   </div>
                   <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="90"></div>
+                <div class="skills__percentage" data-percentage="90"></div>
                   </div>
                 </div>
 
@@ -247,7 +219,7 @@
                     <span class="skills__number">85%</span>
                   </div>
                   <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="85"></div>
+                <div class="skills__percentage" data-percentage="85"></div>
                   </div>
                 </div>
 
@@ -257,7 +229,7 @@
                     <span class="skills__number">80%</span>
                   </div>
                   <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="80"></div>
+                <div class="skills__percentage" data-percentage="80"></div>
                   </div>
                 </div>
 
@@ -267,16 +239,16 @@
                     <span class="skills__number">75%</span>
                   </div>
                   <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="75"></div>
+                <div class="skills__percentage" data-percentage="75"></div>
+              </div>
+            </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-		      </div>
-		    </div>
-      </section>	
+      </section>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer" id="contact">
@@ -284,9 +256,7 @@
         <div class="footer__container container grid">
           <div>
             <h1 class="footer__title">Guanlin Wang</h1>
-            <span class="footer__subtitle" i18n="home__subtitle"
-              >Bachelor of Engineering in Biological Engineering</span
-            >
+          <span class="footer__subtitle" i18n="home__subtitle">Bachelor of Engineering in Biological Engineering</span>
           </div>
 
           <div>
@@ -298,13 +268,13 @@
                 <a href="about.html" class="footer__link" i18n="about">Resume</a>
               </li>
               <li>
-                <a href="portfolio.html" class="footer__link" i18n="portfolio">Coursework</a>
+              <a href="competitions.html" class="footer__link" i18n="portfolio">Coursework</a>
               </li>
               <li>
                 <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
               </li>
               <li>
-                <a href="activities.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
+              <a href="experiment.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
               </li>
             </ul>
             
@@ -337,12 +307,7 @@
         </div>
         <p class="footer__copy">
           &#169; Guanlin Wang.Copy from
-          <a
-            class="footer__copy"
-            href="https://www.youtube.com/c/Bedimcode"
-            target="_blank"
-            >Bedimcode</a
-          >
+        <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
         </p>
       </div>
     </footer>
@@ -362,4 +327,5 @@
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>					
 	</body>
+
 </html>
