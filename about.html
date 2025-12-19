@@ -1,331 +1,420 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-		<!--==================== UNICONS 图标====================-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <!--==================== UNICONS 图标====================-->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
-		<!--==================== SWIPER CSS ====================-->
-		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-		
-		<!--==================== CSS ====================-->
-		<link rel="stylesheet" href="assets/css/styles.css" />
-		<!-- iconfont font class 方式引用图标 -->
-		<!-- <link
+  <!--==================== SWIPER CSS ====================-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+  <!--==================== CSS ====================-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- iconfont font class 方式引用图标 -->
+  <!-- <link
 		  rel="stylesheet"
 		  href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
 		/> -->
-		<title>Resume</title>
-	</head>
+  <title>Resume</title>
+</head>
 
-	<body>
-		<!--==================== HEADER ====================-->
-		<header class="header scroll-header" id="header">
-		  <nav class="nav container">
-		    <a href="#" class="nav__logo">Guanlin Wang</a>
-		    <div class="nav__menu" id="nav-menu">
-		      <ul class="nav__list grid">
-		        <li class="nav__item">
-		          <a href="index.html" class="nav__link">
-		            <i class="uil uil-book nav__icon"></i>
-		            <p i18n="home">Home</p>
-		          </a>
-		        </li>
-		        <li class="nav__item">
-		          <a href="about.html" class="nav__link">
-		            <i class="uil uil-file-alt nav__icon"></i>
-		            <p i18n="about">Resume</p>
-		          </a>
-		        </li>
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header scroll-header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Guanlin Wang</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list grid">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">
+              <i class="uil uil-book nav__icon"></i>
+              <p i18n="home">Home</p>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">
+              <i class="uil uil-file-alt nav__icon"></i>
+              <p i18n="about">Resume</p>
+            </a>
+          </li>
           <li class="nav__item nav__item--dropdown">
             <a href="#" class="nav__link">
-		            <i class="uil uil-book nav__icon"></i>
-		            <p i18n="portfolio">Coursework</p>
+              <i class="uil uil-book nav__icon"></i>
+              <p i18n="portfolio">Coursework</p>
               <i class="uil uil-angle-down nav__dropdown-icon"></i>
-		          </a>
+            </a>
             <ul class="nav__dropdown">
               <li><a href="competitions.html"><i class="uil uil-trophy"></i> Competitions</a></li>
               <li><a href="lab-projects.html"><i class="uil uil-flask"></i> Laboratory Projects</a></li>
             </ul>
-		        </li>
-		        <li class="nav__item">
-		          <a href="qualification.html" class="nav__link">
-		            <i class="uil uil-rocket nav__icon"></i>
-		            <p i18n="qualification">Future Plan</p>
-		          </a>
-		        </li>
+          </li>
+          <li class="nav__item">
+            <a href="qualification.html" class="nav__link">
+              <i class="uil uil-rocket nav__icon"></i>
+              <p i18n="qualification">Future Plan</p>
+            </a>
+          </li>
           <li class="nav__item nav__item--dropdown">
             <a href="#" class="nav__link">
-		            <i class="uil uil-smile nav__icon"></i>
-		            <p i18n="activities">Activities & Hobby</p>
+              <i class="uil uil-smile nav__icon"></i>
+              <p i18n="activities">Activities & Hobby</p>
               <i class="uil uil-angle-down nav__dropdown-icon"></i>
-		          </a>
+            </a>
             <ul class="nav__dropdown">
               <li><a href="experiment.html"><i class="uil uil-flask"></i> Experiment</a></li>
               <li><a href="sn.html"><i class="uil uil-mountains"></i> Sports & Nature</a></li>
               <li><a href="cs.html"><i class="uil uil-game"></i> Counter Strike</a></li>
             </ul>
-		        </li>
-		        <li class="nav__item">
-		          <a href="#contact" class="nav__link">
-		            <i class="uil uil-smile nav__icon"></i>
-		            <p i18n="contact">Contact me</p>
-		          </a>
-		        </li>
-		      </ul>
-		    </div>
-		    <div class="nav__btns">
-		      <i class="uil uil-moon change-theme" id="theme-button"></i>
-		      <div class="nav__toggle" id="nav-toggle">
-		        <i class="uil uil-apps"></i>
-		      </div>
-		    </div>
-		  </nav>
-		</header>
-		<!--==================== ABOUT ====================-->
-		  <section class="about section" id="about">
-		    <h2 class="section__title" i18n="about__title">Resume</h2>
-        <span class="section__subtitle" i18n="about__subtitle">My introduction</span>
-		    <div class="about__container container grid">
-		      <img src="assets/img/about.png" alt="" class="about__img" />
-		
-		      <div class="about__data">
-		        <p class="about__description" i18n="about__description">
-              A dedicated bioengineering student with four research experiences, including iGEM competition and national
-              innovation projects,
-              one quality management internship experience, and strong technical skills in programming and web
-              development.
-		        </p>
-		
-		        <div class="about__info">
-		          <div>
-                <span class="about__info-title"><span class="count" data-end="2" data-decimals="0"></span>+</span>
-                <span class="about__info-name" i18n="about__info-name1">Years of <br />
-                  experience</span>
-		          </div>
-		
-		          <div>
-                <span class="about__info-title"><span class="count" data-end="5" data-decimals="0"></span>+</span>
-                <span class="about__info-name" i18n="about__info-name2">Related <br />
-                  projects</span>
-		          </div>
-		
-		          <div>
-                <span class="about__info-title"><span class="count" data-end="1" data-decimals="0"></span>+</span>
-                <span class="about__info-name" i18n="about__info-name3">Companies <br />
-                  worked</span>
-		          </div>
-		        </div>
-		
-		        <div class="about__buttons">
-		         <a href="cv.html" class="button button-flex">
-		           <span i18n="home__contact">See more details</span>
-		           <i class="uil uil-message button__icon"></i>
-		         </a>
-            </div>
-		        </div>
-		      </div>
-		    </div>
-		  </section>
-    <section class="skills section" id="skills">
-      <span class="section__subtitle" i18n="skills__subtitle">My technical level</span>
-		    <div class="skills__container container grid">
-		      <div>
-            <!--==================== SKILLS 1 ====================-->
-            <div class="skills__content skills__open">
-              <div class="skills__header">
-                <i class="uil uil-brackets-curly skills__icon"></i>
-
-                <div>
-                  <h1 class="skills__title" i18n="home__subtitle">
-                   Theoretical experience
-                  </h1>
-                <span class="skills__subtitle" i18n="skills__years">More than 5 years</span>
-                </div>
-              </div>
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Inorganic Chemistry</h3>
-                    <span class="skills__number">60%</span>
-                  </div>
-                  <div class="skills__bar">
-                  <div class="skills__percentage" data-percentage="60"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Organic Chemistry</h3>
-                    <span class="skills__number">50%</span>
-                  </div>
-                  <div class="skills__bar">
-                  <div class="skills__percentage" data-percentage="50"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Biochemistry</h3>
-                    <span class="skills__number">30%</span>
-                  </div>
-                  <div class="skills__bar">
-                  <div class="skills__percentage" data-percentage="30"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Microbiology</h3>
-                    <span class="skills__number">30%</span>
-                  </div>
-                  <div class="skills__bar">
-                  <div class="skills__percentage" data-percentage="30"></div>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
-            <!--==================== SKILLS 2 ====================-->
-        <div class="skills__content skills__open">
-              <div class="skills__header">
-                <i class="uil uil-server-network skills__icon"></i>
-
-                <div>
-                  <h1 class="skills__title" i18n="skills__title2">
-                    Technical Skills
-                  </h1>
-              <span class="skills__subtitle" i18n="skills__years2">Proficient & Experienced</span>
-                </div>
-              </div>
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Microsoft Office</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                <div class="skills__percentage" data-percentage="90"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Python & MATLAB</h3>
-                    <span class="skills__number">85%</span>
-                  </div>
-                  <div class="skills__bar">
-                <div class="skills__percentage" data-percentage="85"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">SnapGene</h3>
-                    <span class="skills__number">80%</span>
-                  </div>
-                  <div class="skills__bar">
-                <div class="skills__percentage" data-percentage="80"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Web Design (Figma & HBuilderX)</h3>
-                    <span class="skills__number">75%</span>
-                  </div>
-                  <div class="skills__bar">
-                <div class="skills__percentage" data-percentage="75"></div>
-              </div>
-            </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer" id="contact">
-      <div class="footer__bg">
-        <div class="footer__container container grid">
-          <div>
-            <h1 class="footer__title">Guanlin Wang</h1>
-          <span class="footer__subtitle" i18n="home__subtitle">Bachelor of Engineering in Biological Engineering</span>
-          </div>
-
-          <div>
-            <ul class="footer__links">
-              <li>
-                <a href="index.html" class="footer__link" i18n="home">Home</a>
-              </li>
-              <li>
-                <a href="about.html" class="footer__link" i18n="about">Resume</a>
-              </li>
-              <li>
-              <a href="competitions.html" class="footer__link" i18n="portfolio">Coursework</a>
-              </li>
-              <li>
-                <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
-              </li>
-              <li>
-              <a href="experiment.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
-              </li>
-            </ul>
-            
-            <div class="footer__contact">
-              <div class="footer__contact-information">
-                <i class="uil uil-phone-alt footer__contact-icon"></i>
-                <div class="footer__contact-info">
-                  <h3 class="footer__contact-title" i18n="tel">Call me</h3>
-                  <span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
-                </div>
-              </div>
-
-              <div class="footer__contact-information">
-                <i class="uil uil-envelope footer__contact-icon"></i>
-                <div class="footer__contact-info">
-                  <h3 class="footer__contact-title" i18n="email">E-mail</h3>
-                  <span class="footer__contact-subtitle" i18n="email__address">wgl1162682844@163.com</span>
-                </div>
-              </div>
-
-              <div class="footer__contact-information">
-                <i class="uil uil-map-marker footer__contact-icon"></i>
-                <div class="footer__contact-info">
-                  <h3 class="footer__contact-title" i18n="location">Location</h3>
-                  <span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="footer__copy">
-          &#169; Guanlin Wang.Copy from
-        <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
-        </p>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">
+              <i class="uil uil-smile nav__icon"></i>
+              <p i18n="contact">Contact me</p>
+            </a>
+          </li>
+        </ul>
       </div>
-    </footer>
-	
-    <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-      <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
-    <!--==================== SWIPER JS ====================-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+      <div class="nav__btns">
+        <i class="uil uil-moon change-theme" id="theme-button"></i>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="uil uil-apps"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--==================== SIDEBAR ====================-->
+  <aside class="resume-sidebar" aria-label="Resume sidebar">
+    <div class="resume-sidebar-inner">
+      <h4 class="resume-sidebar-title">Resume</h4>
+      <nav class="resume-toc">
+        <a href="#about" class="toc-item">
+          <i class="uil uil-user toc-icon"></i>
+          <span>Introduction</span>
+        </a>
+        <a href="#skills" class="toc-item">
+          <i class="uil uil-brackets-curly toc-icon"></i>
+          <span>Skills</span>
+        </a>
+        <a href="#internship" class="toc-item">
+          <i class="uil uil-briefcase toc-icon"></i>
+          <span>Internship</span>
+        </a>
+        <a href="#top" class="toc-item">
+          <i class="uil uil-arrow-up toc-icon"></i>
+          <span>Back to top</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+  <!--==================== ABOUT ====================-->
+  <section class="about section" id="about">
+    <h2 class="section__title" i18n="about__title">Resume</h2>
+    <span class="section__subtitle" i18n="about__subtitle">My introduction</span>
+    <div class="about__container container grid">
+      <img src="assets/img/about.png" alt="" class="about__img" />
 
-    <!-- iconfont JS -->
-    <script src="assets/js/iconfont.js"></script>
-    <!-- jquery -->
-    <script src="assets/js/jquery2.1.4.min.js"></script>
-    <script src="assets/js/jquery.i18n.min.js"></script>
-    <!--==================== MAIN JS ====================-->
-    <script src="assets/js/main.js"></script>					
-	</body>
+      <div class="about__data">
+        <p class="about__description" i18n="about__description">
+          A dedicated bioengineering student with four research experiences, including iGEM competition and national
+          innovation projects,
+          one quality management internship experience, and strong technical skills in programming and web
+          development.
+        </p>
+
+        <div class="about__info">
+          <div>
+            <span class="about__info-title"><span class="count" data-end="2" data-decimals="0"></span>+</span>
+            <span class="about__info-name" i18n="about__info-name1">Years of <br />
+              experience</span>
+          </div>
+
+          <div>
+            <span class="about__info-title"><span class="count" data-end="5" data-decimals="0"></span>+</span>
+            <span class="about__info-name" i18n="about__info-name2">Related <br />
+              projects</span>
+          </div>
+
+          <div>
+            <span class="about__info-title"><span class="count" data-end="1" data-decimals="0"></span>+</span>
+            <span class="about__info-name" i18n="about__info-name3">Companies <br />
+              worked</span>
+          </div>
+        </div>
+
+        <div class="about__buttons">
+          <a href="cv.html" class="button button-flex">
+            <span i18n="home__contact">See more details</span>
+            <i class="uil uil-message button__icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="skills section" id="skills">
+    <span class="section__subtitle" i18n="skills__subtitle">My technical level</span>
+    <div class="skills__container container grid">
+      <div>
+        <!--==================== SKILLS 1 ====================-->
+        <div class="skills__content skills__open">
+          <div class="skills__header">
+            <i class="uil uil-brackets-curly skills__icon"></i>
+
+            <div>
+              <h1 class="skills__title" i18n="home__subtitle">
+                Theoretical experience
+              </h1>
+              <span class="skills__subtitle" i18n="skills__years">More than 5 years</span>
+            </div>
+          </div>
+
+          <div class="skills__list grid">
+            <div class="skills__data">
+              <div class="skills__titles">
+                <h3 class="skills__name">Inorganic Chemistry</h3>
+                <span class="skills__number">60%</span>
+              </div>
+              <div class="skills__bar">
+                <div class="skills__percentage" data-percentage="60"></div>
+              </div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__titles">
+                <h3 class="skills__name">Organic Chemistry</h3>
+                <span class="skills__number">50%</span>
+              </div>
+              <div class="skills__bar">
+                <div class="skills__percentage" data-percentage="50"></div>
+              </div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__titles">
+                <h3 class="skills__name">Biochemistry</h3>
+                <span class="skills__number">30%</span>
+              </div>
+              <div class="skills__bar">
+                <div class="skills__percentage" data-percentage="30"></div>
+              </div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__titles">
+                <h3 class="skills__name">Microbiology</h3>
+                <span class="skills__number">30%</span>
+              </div>
+              <div class="skills__bar">
+                <div class="skills__percentage" data-percentage="30"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--==================== SKILLS 2 ====================-->
+      <div class="skills__content skills__open">
+        <div class="skills__header">
+          <i class="uil uil-server-network skills__icon"></i>
+
+          <div>
+            <h1 class="skills__title" i18n="skills__title2">
+              Technical Skills
+            </h1>
+            <span class="skills__subtitle" i18n="skills__years2">Proficient & Experienced</span>
+          </div>
+        </div>
+
+        <div class="skills__list grid">
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">Microsoft Office</h3>
+              <span class="skills__number">90%</span>
+            </div>
+            <div class="skills__bar">
+              <div class="skills__percentage" data-percentage="90"></div>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">Python & MATLAB</h3>
+              <span class="skills__number">85%</span>
+            </div>
+            <div class="skills__bar">
+              <div class="skills__percentage" data-percentage="85"></div>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">SnapGene</h3>
+              <span class="skills__number">80%</span>
+            </div>
+            <div class="skills__bar">
+              <div class="skills__percentage" data-percentage="80"></div>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">Web Design (Figma & HBuilderX)</h3>
+              <span class="skills__number">75%</span>
+            </div>
+            <div class="skills__bar">
+              <div class="skills__percentage" data-percentage="75"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!--==================== INTERNSHIP ====================-->
+  <section class="internship section" id="internship">
+    <span class="section__subtitle">Internship Experience</span>
+    <div class="internship__container container">
+      <!-- Internship 1 -->
+      <div class="internship__item">
+        <div class="internship__header">
+          <div class="internship__company">
+            <h3 class="internship__title">Hangzhou Tigermed Consulting Co., Ltd.</h3>
+            <p class="internship__role">CRA intern</p>
+          </div>
+          <div class="internship__meta">
+            <span><i class="uil uil-map-marker"></i> Beijing, China</span>
+            <span><i class="uil uil-calendar-alt"></i> July 2024 - October 2025</span>
+          </div>
+        </div>
+        <div class="internship__content">
+          <ul class="internship__list">
+            <li class="internship__bullet">Participated in Phase III clinical trials for hepatocellular carcinoma and
+              Phase II clinical trials for autologous natural tumor-infiltrating lymphocyte injection (GC101 TIL)</li>
+            <li class="internship__bullet">Involved in multi-center Phase I clinical trials for the safety,
+              tolerability, and efficacy of various anti-cancer drugs (LBL-007 combined with Trastuzumab and Axitinib)
+              for unresectable or metastatic melanoma</li>
+            <li class="internship__bullet">Gained a deep understanding of the entire process from drug research and
+              development to commercialization</li>
+            <li class="internship__bullet">Collaborated with hospital oncology departments, liaised with ethics
+              committees, revised informed consent forms and trial protocols</li>
+            <li class="internship__bullet">Ensured compliance of clinical trials and protected subjects' rights</li>
+            <li class="internship__bullet">Proficiently used EDC (Electronic Data Capture) and ethical systems for
+              biomedical data management and statistical analysis</li>
+            <li class="internship__bullet">Enhanced document writing for multi-center clinical trials and
+              interdisciplinary technical communication (doctors, subjects, CRC)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Internship 2 -->
+      <div class="internship__item">
+        <div class="internship__header">
+          <div class="internship__company">
+            <h3 class="internship__title">Henan Lixin Pharmaceutical Co., Ltd.</h3>
+            <p class="internship__role">Quality Management Department Intern</p>
+          </div>
+          <div class="internship__meta">
+            <span><i class="uil uil-map-marker"></i> Nanyang, China</span>
+            <span><i class="uil uil-calendar-alt"></i> July 2024 - August 2024</span>
+          </div>
+        </div>
+        <div class="internship__content">
+          <ul class="internship__list">
+            <li class="internship__bullet">Independently performed full process quality inspection of sodium chloride
+              injection, glucose injection, and other products (over 8 batches daily) according to "Chinese
+              Pharmacopoeia" standards</li>
+            <li class="internship__bullet">Inspected for content, optical rotation, pH value, particulates, and maximum
+              absorption wavelength</li>
+            <li class="internship__bullet">Ensured drug quality complied with national regulations</li>
+            <li class="internship__bullet">Systematically recorded and archived quality inspection data</li>
+            <li class="internship__bullet">Assisted in writing monthly quality analysis reports, providing data support
+              and improvement suggestions for production process optimization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer" id="contact">
+    <div class="footer__bg">
+      <div class="footer__container container grid">
+        <div>
+          <h1 class="footer__title">Guanlin Wang</h1>
+          <span class="footer__subtitle" i18n="home__subtitle">Bachelor of Engineering in Biological Engineering</span>
+        </div>
+
+        <div>
+          <ul class="footer__links">
+            <li>
+              <a href="index.html" class="footer__link" i18n="home">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="footer__link" i18n="about">Resume</a>
+            </li>
+            <li>
+              <a href="competitions.html" class="footer__link" i18n="portfolio">Coursework</a>
+            </li>
+            <li>
+              <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
+            </li>
+            <li>
+              <a href="experiment.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
+            </li>
+          </ul>
+
+          <div class="footer__contact">
+            <div class="footer__contact-information">
+              <i class="uil uil-phone-alt footer__contact-icon"></i>
+              <div class="footer__contact-info">
+                <h3 class="footer__contact-title" i18n="tel">Call me</h3>
+                <span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
+              </div>
+            </div>
+
+            <div class="footer__contact-information">
+              <i class="uil uil-envelope footer__contact-icon"></i>
+              <div class="footer__contact-info">
+                <h3 class="footer__contact-title" i18n="email">E-mail</h3>
+                <span class="footer__contact-subtitle" i18n="email__address">wgl1162682844@163.com</span>
+              </div>
+            </div>
+
+            <div class="footer__contact-information">
+              <i class="uil uil-map-marker footer__contact-icon"></i>
+              <div class="footer__contact-info">
+                <h3 class="footer__contact-title" i18n="location">Location</h3>
+                <span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer__copy">
+        &#169; Guanlin Wang.Copy from
+        <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
+      </p>
+    </div>
+  </footer>
+
+  <!--==================== SCROLL TOP ====================-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="uil uil-arrow-up scrollup__icon"></i>
+  </a>
+  <!--==================== SWIPER JS ====================-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+  <!-- iconfont JS -->
+  <script src="assets/js/iconfont.js"></script>
+  <!-- jquery -->
+  <script src="assets/js/jquery2.1.4.min.js"></script>
+  <script src="assets/js/jquery.i18n.min.js"></script>
+  <!--==================== MAIN JS ====================-->
+  <script src="assets/js/main.js"></script>
+</body>
 
 </html>
