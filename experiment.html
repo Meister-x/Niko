@@ -1,227 +1,168 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-		<!--==================== UNICONS 图标====================-->
-		<link
-		  rel="stylesheet"
-		  href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
-		/>
-		<!--==================== SWIPER CSS ====================-->
-		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-		
-		<!--==================== CSS ====================-->
-		<link rel="stylesheet" href="assets/css/styles.css" />
-		<!-- iconfont font class 方式引用图标 -->
-		<!-- <link
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<!--==================== UNICONS 图标====================-->
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+	<!--==================== SWIPER CSS ====================-->
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+	<!--==================== CSS ====================-->
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<!-- iconfont font class 方式引用图标 -->
+	<!-- <link
 		  rel="stylesheet"
 		  href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
 		/> -->
-		<title></title>
-	</head>
-	<body>
-		<!--==================== HEADER ====================-->
-		<header class="header scroll-header" id="header">
-		  <nav class="nav container">
-		    <a href="#" class="nav__logo">Guanlin Wang</a>
-		    <div class="nav__menu" id="nav-menu">
-		      <ul class="nav__list grid">
-		        <li class="nav__item">
-		          <a href="index.html" class="nav__link">
-		            <i class="uil uil-book nav__icon"></i>
-		            <p i18n="home">Home</p>
-		          </a>
-		        </li>
-		        <li class="nav__item">
-		          <a href="about.html" class="nav__link">
-		            <i class="uil uil-file-alt nav__icon"></i>
-		            <p i18n="about">Resume</p>
-		          </a>
-		        </li>
-		        <li class="nav__item nav__item--dropdown">
-		          <a href="#" class="nav__link">
-		            <i class="uil uil-book nav__icon"></i>
-		            <p i18n="portfolio">Coursework</p>
-		            <i class="uil uil-angle-down nav__dropdown-icon"></i>
-		          </a>
-		          <ul class="nav__dropdown">
-		            <li><a href="competitions.html"><i class="uil uil-trophy"></i> Competitions</a></li>
-		            <li><a href="lab-projects.html"><i class="uil uil-flask"></i> Laboratory Projects</a></li>
-		          </ul>
-		        </li>
-		        <li class="nav__item">
-		          <a href="qualification.html" class="nav__link">
-		            <i class="uil uil-rocket nav__icon"></i>
-		            <p i18n="qualification">Future Plan</p>
-		          </a>
-		        </li>
-		        <li class="nav__item nav__item--dropdown">
-		          <a href="#" class="nav__link active-link">
-		            <i class="uil uil-smile nav__icon"></i>
-		            <p i18n="activities">Activities & Hobby</p>
-		            <i class="uil uil-angle-down nav__dropdown-icon"></i>
-		          </a>
-		          <ul class="nav__dropdown">
-		            <li><a href="experiment.html"><i class="uil uil-flask"></i> Experiment</a></li>
-		            <li><a href="sn.html"><i class="uil uil-mountains"></i> Sports & Nature</a></li>
-		            <li><a href="cs.html"><i class="uil uil-game"></i> Counter Strike</a></li>
-		          </ul>
-		        </li>
-		        <li class="nav__item">
-		          <a href="#contact" class="nav__link">
-		            <i class="uil uil-smile nav__icon"></i>
-		            <p i18n="contact">Contact me</p>
-		          </a>
-		        </li>
-		      </ul>
-		    </div>
-		    <div class="nav__btns">
-		      <i class="uil uil-moon change-theme" id="theme-button"></i>
-		      <div class="nav__toggle" id="nav-toggle">
-		        <i class="uil uil-apps"></i>
-		      </div>
-		    </div>
-		  </nav>
-		</header>
-		
-		<!-- Activity Introduction Box -->
-		<div class="activity-intro">
-			<h2 class="activity-intro__title">
-				<i class="uil uil-flask"></i> Experiment
-			</h2>
-			<p class="activity-intro__text">
-				I have a deep passion for conducting experiments in the field of biology, which is the fundamental 
-				reason why I chose my current major. The laboratory is where theory meets practice, where curiosity 
-				transforms into discovery. Through hands-on experimentation, I've developed critical thinking skills, 
-				attention to detail, and a systematic approach to problem-solving.
-			</p>
-			<p class="activity-intro__text">
-				My experimental work spans various areas including microbiology, bioprocess engineering, and 
-				biotechnology. Each experiment teaches me not only about biological systems but also about patience, 
-				precision, and the scientific method. The thrill of observing results, analyzing data, and drawing 
-				conclusions drives my passion for research and innovation in biological engineering.
+	<title></title>
+</head>
+
+<body>
+	<!--==================== HEADER ====================-->
+	<header class="header scroll-header" id="header">
+		<!-- Navigation bar will be loaded dynamically by navbar.js -->
+	</header>
+
+	<!-- Activity Introduction Box -->
+	<div class="activity-intro">
+		<h2 class="activity-intro__title">
+			<i class="uil uil-flask"></i> Experiment
+		</h2>
+		<p class="activity-intro__text">
+			I have a deep passion for conducting experiments in the field of biology, which is the fundamental
+			reason why I chose my current major. The laboratory is where theory meets practice, where curiosity
+			transforms into discovery. Through hands-on experimentation, I've developed critical thinking skills,
+			attention to detail, and a systematic approach to problem-solving.
+		</p>
+		<p class="activity-intro__text">
+			My experimental work spans various areas including microbiology, bioprocess engineering, and
+			biotechnology. Each experiment teaches me not only about biological systems but also about patience,
+			precision, and the scientific method. The thrill of observing results, analyzing data, and drawing
+			conclusions drives my passion for research and innovation in biological engineering.
+		</p>
+	</div>
+
+	<div class="activity-container">
+		<div id="slide">
+			<div class="item" style="background-image: url(1.jpg);">
+				<div class="content">
+					<div class="name">Experiment</div>
+					<div class="des">The culture medium produced during the experimental process</div>
+				</div>
+			</div>
+			<div class="item" style="background-image: url(2.jpg);">
+				<div class="content">
+					<div class="name">Experiment</div>
+					<div class="des">Yeast observed under a microscope during the experimental process</div>
+				</div>
+			</div>
+			<div class="item" style="background-image: url(3.jpg);">
+				<div class="content">
+					<div class="name">Experiment</div>
+					<div class="des">Slope culture medium used for preserving bacterial strains</div>
+				</div>
+			</div>
+			<div class="item" style="background-image: url(4.jpg);">
+				<div class="content">
+					<div class="name">Experiment</div>
+					<div class="des">The instruments used in the experiment</div>
+				</div>
+			</div>
+		</div>
+		<div class="buttons">
+			<button id="prev" aria-label="Previous slide"><i class="fa-solid fa-angle-left"></i></button>
+			<button id="next" aria-label="Next slide"><i class="fa-solid fa-angle-right"></i></button>
+		</div>
+	</div>
+
+	<!--==================== FOOTER ====================-->
+	<footer class="footer" id="contact">
+		<div class="footer__bg">
+			<div class="footer__container container grid">
+				<div>
+					<h1 class="footer__title">Guanlin Wang</h1>
+					<span class="footer__subtitle" i18n="home__subtitle">Bachelor of Engineering in Biological
+						Engineering</span>
+				</div>
+
+				<div>
+					<ul class="footer__links">
+						<li>
+							<a href="index.html" class="footer__link" i18n="home">Home</a>
+						</li>
+						<li>
+							<a href="about.html" class="footer__link" i18n="about">Resume</a>
+						</li>
+						<li>
+							<a href="coursework.html" class="footer__link" i18n="portfolio">Coursework</a>
+						</li>
+						<li>
+							<a href="academic.html" class="footer__link" i18n="portfolio">Academic</a>
+						</li>
+						<li>
+							<a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
+						</li>
+						<li>
+							<a href="experiment.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
+						</li>
+					</ul>
+
+					<div class="footer__contact">
+						<div class="footer__contact-information">
+							<i class="uil uil-phone-alt footer__contact-icon"></i>
+							<div class="footer__contact-info">
+								<h3 class="footer__contact-title" i18n="tel">Call me</h3>
+								<span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
+							</div>
+						</div>
+
+						<div class="footer__contact-information">
+							<i class="uil uil-envelope footer__contact-icon"></i>
+							<div class="footer__contact-info">
+								<h3 class="footer__contact-title" i18n="email">E-mail</h3>
+								<span class="footer__contact-subtitle"
+									i18n="email__address">wgl1162682844@163.com</span>
+							</div>
+						</div>
+
+						<div class="footer__contact-information">
+							<i class="uil uil-map-marker footer__contact-icon"></i>
+							<div class="footer__contact-info">
+								<h3 class="footer__contact-title" i18n="location">Location</h3>
+								<span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="footer__copy">
+				&#169; Guanlin Wang.Copy from
+				<a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
 			</p>
 		</div>
-		
-		<div class="activity-container">
-		    <div id="slide">
-		        <div class="item" style="background-image: url(1.jpg);">
-		            <div class="content">
-		                <div class="name">Experiment</div>
-		                <div class="des">The culture medium produced during the experimental process</div>
-		            </div>
-		        </div>
-		        <div class="item" style="background-image: url(2.jpg);">
-		            <div class="content">
-		                <div class="name">Experiment</div>
-		                <div class="des">Yeast observed under a microscope during the experimental process</div>
-		            </div>
-		        </div>
-		        <div class="item" style="background-image: url(3.jpg);">
-		            <div class="content">
-		                <div class="name">Experiment</div>
-		                <div class="des">Slope culture medium used for preserving bacterial strains</div>
-		            </div>
-		        </div>
-		        <div class="item" style="background-image: url(4.jpg);">
-		            <div class="content">
-		                <div class="name">Experiment</div>
-		                <div class="des">The instruments used in the experiment</div>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="buttons">
-		        <button id="prev" aria-label="Previous slide"><i class="fa-solid fa-angle-left"></i></button>
-		        <button id="next" aria-label="Next slide"><i class="fa-solid fa-angle-right"></i></button>
-		    </div>
-		</div>
-		
-		<!--==================== FOOTER ====================-->
-		<footer class="footer" id="contact">
-		  <div class="footer__bg">
-		    <div class="footer__container container grid">
-		      <div>
-		        <h1 class="footer__title">Guanlin Wang</h1>
-		        <span class="footer__subtitle" i18n="home__subtitle"
-		          >Bachelor of Engineering in Biological Engineering</span
-		        >
-		      </div>
+	</footer>
 
-      <div>
-        <ul class="footer__links">
-          <li>
-            <a href="index.html" class="footer__link" i18n="home">Home</a>
-          </li>
-          <li>
-            <a href="about.html" class="footer__link" i18n="about">Resume</a>
-          </li>
-          <li>
-            <a href="portfolio.html" class="footer__link" i18n="portfolio">Coursework</a>
-          </li>
-          <li>
-            <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
-          </li>
-          <li>
-            <a href="experiment.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
-          </li>
-        </ul>
-        
-        <div class="footer__contact">
-          <div class="footer__contact-information">
-            <i class="uil uil-phone-alt footer__contact-icon"></i>
-            <div class="footer__contact-info">
-              <h3 class="footer__contact-title" i18n="tel">Call me</h3>
-              <span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
-            </div>
-          </div>
+	<script src="assets/js/script.js"></script>
+	<!--==================== SCROLL TOP ====================-->
+	<a href="#" class="scrollup" id="scroll-up">
+		<i class="uil uil-arrow-up scrollup__icon"></i>
+	</a>
+	<!--==================== SWIPER JS ====================-->
+	<script src="assets/js/swiper-bundle.min.js"></script>
 
-          <div class="footer__contact-information">
-            <i class="uil uil-envelope footer__contact-icon"></i>
-            <div class="footer__contact-info">
-              <h3 class="footer__contact-title" i18n="email">E-mail</h3>
-              <span class="footer__contact-subtitle" i18n="email__address">wgl1162682844@163.com</span>
-            </div>
-          </div>
+	<!-- iconfont JS -->
+	<script src="assets/js/iconfont.js"></script>
+	<!-- jquery -->
+	<script src="assets/js/jquery2.1.4.min.js"></script>
+	<script src="assets/js/jquery.i18n.min.js"></script>
+	<!--==================== NAVBAR JS ====================-->
+	<script src="assets/js/navbar.js"></script>
+	<!--==================== MAIN JS ====================-->
+	<script src="assets/js/main.js"></script>
+</body>
 
-          <div class="footer__contact-information">
-            <i class="uil uil-map-marker footer__contact-icon"></i>
-            <div class="footer__contact-info">
-              <h3 class="footer__contact-title" i18n="location">Location</h3>
-              <span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-		    <p class="footer__copy">
-		      &#169; Guanlin Wang.Copy from
-		      <a
-		        class="footer__copy"
-		        href="https://www.youtube.com/c/Bedimcode"
-		        target="_blank"
-		        >Bedimcode</a
-		      >
-		    </p>
-		  </div>
-		</footer>
-		
-		<script src="assets/js/script.js"></script>
-		<!--==================== SCROLL TOP ====================-->
-		<a href="#" class="scrollup" id="scroll-up">
-		  <i class="uil uil-arrow-up scrollup__icon"></i>
-		</a>
-		<!--==================== SWIPER JS ====================-->
-		<script src="assets/js/swiper-bundle.min.js"></script>
-		
-		<!-- iconfont JS -->
-		<script src="assets/js/iconfont.js"></script>
-		<!-- jquery -->
-		<script src="assets/js/jquery2.1.4.min.js"></script>
-		<script src="assets/js/jquery.i18n.min.js"></script>
-		<!--==================== MAIN JS ====================-->
-		<script src="assets/js/main.js"></script>
-	</body>
 </html>

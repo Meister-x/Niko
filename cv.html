@@ -24,69 +24,8 @@
 	<body>
 		<!--==================== HEADER ====================-->
 		<header class="header scroll-header" id="header">
-		  <nav class="nav container">
-		    <a href="#" class="nav__logo">Guanlin Wang</a>
-		    <div class="nav__menu" id="nav-menu">
-		      <ul class="nav__list grid">
-		        <li class="nav__item">
-		          <a href="index.html" class="nav__link">
-		            <i class="uil uil-book nav__icon"></i>
-		            <p i18n="home">Home</p>
-		          </a>
-		        </li>
-		        <li class="nav__item">
-		          <a href="about.html" class="nav__link">
-		            <i class="uil uil-file-alt nav__icon"></i>
-		            <p i18n="about">Resume</p>
-		          </a>
-		        </li>
-		        <li class="nav__item nav__item--dropdown">
-		          <a href="#" class="nav__link">
-		            <i class="uil uil-book nav__icon"></i>
-		            <p i18n="portfolio">Coursework</p>
-		            <i class="uil uil-angle-down nav__dropdown-icon"></i>
-		          </a>
-		          <ul class="nav__dropdown">
-		            <li><a href="competitions.html"><i class="uil uil-trophy"></i> Competitions</a></li>
-		            <li><a href="lab-projects.html"><i class="uil uil-flask"></i> Laboratory Projects</a></li>
-		          </ul>
-		        </li>
-		        <li class="nav__item">
-		          <a href="qualification.html" class="nav__link">
-		            <i class="uil uil-rocket nav__icon"></i>
-		            <p i18n="qualification">Future Plan</p>
-		          </a>
-		        </li>
-		        <li class="nav__item">
-		          <li class="nav__item nav__item--dropdown">
-		            <a href="#" class="nav__link">
-		            <i class="uil uil-smile nav__icon"></i>
-		            <p i18n="activities">Activities & Hobby</p>
-		              <i class="uil uil-angle-down nav__dropdown-icon"></i>
-		            </a>
-		            <ul class="nav__dropdown">
-		              <li><a href="experiment.html"><i class="uil uil-flask"></i> Experiment</a></li>
-		              <li><a href="sn.html"><i class="uil uil-mountains"></i> Sports & Nature</a></li>
-		              <li><a href="cs.html"><i class="uil uil-game"></i> Counter Strike</a></li>
-		            </ul>
-		          </li>
-		        </li>
-		        <li class="nav__item">
-		          <a href="#contact" class="nav__link">
-		            <i class="uil uil-smile nav__icon"></i>
-		            <p i18n="contact">Contact me</p>
-		          </a>
-		        </li>
-		      </ul>
-		    </div>
-		    <div class="nav__btns">
-		      <i class="uil uil-moon change-theme" id="theme-button"></i>
-		      <div class="nav__toggle" id="nav-toggle">
-		        <i class="uil uil-apps"></i>
-		      </div>
-		    </div>
-		  </nav>
-		</header>
+    <!-- Navigation bar will be loaded dynamically by navbar.js -->
+  </header>
 		<!DOCTYPE html>
 		<html lang="en">
 		
@@ -126,7 +65,10 @@
             <a href="about.html" class="footer__link" i18n="about">Resume</a>
           </li>
           <li>
-            <a href="competitions.html" class="footer__link" i18n="portfolio">Coursework</a>
+            <a href="coursework.html" class="footer__link" i18n="portfolio">Coursework</a>
+          </li>
+          <li>
+            <a href="academic.html" class="footer__link" i18n="portfolio">Academic</a>
           </li>
           <li>
             <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
@@ -189,6 +131,8 @@
 		<!-- jquery -->
 		<script src="assets/js/jquery2.1.4.min.js"></script>
 		<script src="assets/js/jquery.i18n.min.js"></script>
+		<!--==================== NAVBAR JS ====================-->
+		<script src="assets/js/navbar.js"></script>
 		<!--==================== MAIN JS ====================-->
 		<script src="assets/js/main.js"></script>
 	</body>

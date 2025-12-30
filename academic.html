@@ -4,21 +4,14 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<!--==================== UNICONS 图标====================-->
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
 	<!--==================== SWIPER CSS ====================-->
 	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-
 	<!--==================== CSS ====================-->
 	<link rel="stylesheet" href="assets/css/styles.css" />
-	<!-- iconfont font class 方式引用图标 -->
-	<!-- <link
-		  rel="stylesheet"
-		  href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
-		/> -->
-	<title>cs</title>
+	<title>Academic</title>
 </head>
 
 <body>
@@ -27,65 +20,49 @@
 		<!-- Navigation bar will be loaded dynamically by navbar.js -->
 	</header>
 
-	<!-- Activity Introduction Box -->
-	<div class="activity-intro">
-		<h2 class="activity-intro__title">
-			<i class="uil uil-mountains"></i> Sports & Nature
-		</h2>
-		<p class="activity-intro__text">
-			Physical activity and connection with nature are essential pillars of my life balance. On weekdays,
-			I actively engage in various sports and outdoor activities, which not only strengthen my body but also
-			elevate my spirit and clear my mind. Whether it's playing basketball with friends, badminton matches,
-			or simply appreciating natural scenery, these moments provide crucial balance to academic pressure.
-		</p>
-		<p class="activity-intro__text">
-			Sports teach me teamwork, perseverance, and the joy of healthy competition. Nature reminds me of the
-			beauty and complexity of biological systems I study in the laboratory. From observing snow-covered
-			landscapes in my hometown to cultivating plants in my dormitory, I find inspiration and peace in the
-			natural world. These experiences outside the classroom enrich my understanding of life and provide
-			the energy needed for academic pursuits.
-		</p>
-	</div>
+	<!--==================== MAIN ====================-->
+	<main class="main">
+		<!--==================== ACADEMIC ====================-->
+		<section class="portfolio section" id="portfolio">
+			<h2 class="section__title" i18n="portfolio__title">Academic</h2>
+			<span class="section__subtitle" i18n="portfolio__subtitle">Research Experience</span>
 
-	<div class="activity-container">
-		<div id="slide">
-			<div class="item" style="background-image: url(8.jpg);">
-				<div class="content">
-					<div class="name">Sports and Nature</div>
-					<div class="des">Every weekend, I have a thrilling basketball game with my brothers</div>
-				</div>
+			<!-- Introduction Section -->
+			<div class="section__intro">
+				<p class="section__intro-text">
+					My academic journey encompasses participation in international competitions and hands-on laboratory
+					research projects.
+					These experiences have shaped my understanding of biological engineering, from synthetic biology
+					applications in iGEM
+					competitions to practical R&D work in nasal mucosa moisturizing spray development and yeast
+					screening research.
+				</p>
 			</div>
-			<div class="item" style="background-image: url(9.jpg);">
-				<div class="content">
-					<div class="name">Sports and Nature</div>
-					<div class="des">The beautiful snow scenery by the Baihe River captured in my hometown</div>
-				</div>
+
+			<div class="portfolio__cards-container container grid">
+				<a href="competitions.html" class="portfolio__card">
+					<div class="portfolio__card-icon">
+						<i class="uil uil-trophy"></i>
+					</div>
+					<h3 class="portfolio__card-title">Competitions</h3>
+					<p class="portfolio__card-description">International & University Level Competitions</p>
+					<span class="button button--flex button--small portfolio__card-button">
+						View Projects <i class="uil uil-arrow-right button__icon"></i>
+					</span>
+				</a>
+				<a href="lab-projects.html" class="portfolio__card">
+					<div class="portfolio__card-icon">
+						<i class="uil uil-flask"></i>
+					</div>
+					<h3 class="portfolio__card-title">Laboratory Projects</h3>
+					<p class="portfolio__card-description">Research & Development Projects</p>
+					<span class="button button--flex button--small portfolio__card-button">
+						View Projects <i class="uil uil-arrow-right button__icon"></i>
+					</span>
+				</a>
 			</div>
-			<div class="item" style="background-image: url(10.jpg);">
-				<div class="content">
-					<div class="name">Sports and Naturee</div>
-					<div class="des">The lilies grown in the dormitory bloomed beautifully</div>
-				</div>
-			</div>
-			<div class="item" style="background-image: url(11.jpg);">
-				<div class="content">
-					<div class="name">Sports and Naturee</div>
-					<div class="des">Every weekend, I make an appointment with my good friends to play a badminton match
-						at the venue</div>
-				</div>
-			</div>
-			<div class="item" style="background-image: url(12.jpg);">
-				<div class="content">
-					<div class="name">Sports and Naturee</div>
-					<div class="des">32 inch oversized pizza with girlfriend</div>
-				</div>
-			</div>
-		</div>
-		<div class="buttons">
-			<button id="prev" aria-label="Previous slide"><i class="fa-solid fa-angle-left"></i></button>
-			<button id="next" aria-label="Next slide"><i class="fa-solid fa-angle-right"></i></button>
-		</div>
-	</div>
+		</section>
+	</main>
 
 	<!--==================== FOOTER ====================-->
 	<footer class="footer" id="contact">
@@ -149,12 +126,12 @@
 			</div>
 			<p class="footer__copy">
 				&#169; Guanlin Wang.Copy from
-				<a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
+				<a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank"
+					rel="noopener">Bedimcode</a>
 			</p>
 		</div>
 	</footer>
 
-	<script src="assets/js/script.js"></script>
 	<!--==================== SCROLL TOP ====================-->
 	<a href="#" class="scrollup" id="scroll-up">
 		<i class="uil uil-arrow-up scrollup__icon"></i>

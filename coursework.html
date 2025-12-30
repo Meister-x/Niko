@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<!--==================== UNICONS 图标====================-->
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+	<!--==================== SWIPER CSS ====================-->
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+	<!--==================== CSS ====================-->
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<title>Coursework</title>
+	<style>
+		.coursework__intro {
+			max-width: 800px;
+			margin: 0 auto var(--mb-3);
+			padding: 2rem;
+			background: var(--container-color);
+			border-radius: 1rem;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+		}
+
+		.coursework__intro-text {
+			font-size: var(--normal-font-size);
+			color: var(--text-color);
+			line-height: 1.8;
+			text-align: center;
+		}
+
+		.coursework__grades-container {
+			max-width: 1200px;
+			margin: 0 auto var(--mb-3);
+		}
+
+		.coursework__grades-table {
+			width: 100%;
+			background: var(--container-color);
+			border-radius: 1rem;
+			overflow: hidden;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+			margin-bottom: var(--mb-2);
+			opacity: 0;
+			transform: translateY(20px);
+			transition: all 0.6s ease;
+		}
+
+		.coursework__grades-table.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.coursework__table-header {
+			background: linear-gradient(135deg, var(--first-color), var(--first-color-alt));
+			color: white;
+			padding: 1.5rem;
+			text-align: center;
+		}
+
+		.coursework__table-header h3 {
+			font-size: var(--h2-font-size);
+			font-weight: var(--font-semi-bold);
+			margin: 0;
+		}
+
+		.coursework__table-content {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 0;
+		}
+
+		.coursework__table-column {
+			padding: 1.5rem;
+		}
+
+		.coursework__table-column:not(:last-child) {
+			border-right: 1px solid rgba(0, 0, 0, 0.1);
+		}
+
+		body.dark-theme .coursework__table-column:not(:last-child) {
+			border-right: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+		.coursework__table-column .coursework__grade-row {
+			background: var(--container-color);
+		}
+
+		.coursework__grade-row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+			margin-bottom: 0.5rem;
+			background: var(--container-color);
+			border-radius: 0.5rem;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			position: relative;
+			overflow: hidden;
+			border: 1px solid transparent;
+		}
+
+		.coursework__grade-row::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 0;
+			background: linear-gradient(90deg, var(--first-color-lighter), transparent);
+			transition: width 0.3s ease;
+			z-index: 0;
+		}
+
+		.coursework__grade-row:hover {
+			transform: translateX(5px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			background: var(--body-color);
+			border-color: var(--first-color-lighter);
+		}
+
+		.coursework__grade-row:hover::before {
+			width: 4px;
+		}
+
+		.coursework__grade-row>* {
+			position: relative;
+			z-index: 1;
+		}
+
+		.coursework__course-name {
+			font-size: var(--normal-font-size);
+			color: var(--title-color);
+			font-weight: var(--font-medium);
+			flex: 1;
+			line-height: 1.5;
+		}
+
+		.coursework__grade-score {
+			font-size: var(--h3-font-size);
+			font-weight: var(--font-semi-bold);
+			color: var(--first-color);
+			min-width: 50px;
+			text-align: right;
+			position: relative;
+		}
+
+		.coursework__grade-score::after {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background: var(--first-color);
+			transition: width 0.6s ease;
+		}
+
+		.coursework__grade-row.visible .coursework__grade-score::after {
+			width: 100%;
+		}
+
+		.coursework__assessment {
+			max-width: 800px;
+			margin: var(--mb-3) auto;
+			padding: 2rem;
+			background: var(--container-color);
+			border-radius: 1rem;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+			opacity: 0;
+			transform: translateY(20px);
+			transition: all 0.6s ease 0.3s;
+		}
+
+		.coursework__assessment.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.coursework__assessment-title {
+			font-size: var(--h2-font-size);
+			color: var(--title-color);
+			margin-bottom: var(--mb-1-5);
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+
+		.coursework__assessment-title i {
+			color: var(--first-color);
+			font-size: 1.5rem;
+		}
+
+		.coursework__assessment-text {
+			font-size: var(--normal-font-size);
+			color: var(--text-color);
+			line-height: 1.8;
+			text-align: justify;
+		}
+
+		.coursework__stats {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 1.5rem;
+			margin: var(--mb-3) auto;
+			max-width: 1200px;
+		}
+
+		.coursework__rank-card {
+			background: var(--container-color);
+			padding: 2rem;
+			border-radius: 1rem;
+			text-align: center;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+			transition: all 0.3s ease;
+			opacity: 0;
+			transform: translateY(20px);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.coursework__rank-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+			transition: left 0.5s ease;
+		}
+
+		.coursework__rank-card:hover::before {
+			left: 100%;
+		}
+
+		.coursework__rank-card.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.coursework__rank-card:nth-child(4) {
+			transition-delay: 0.4s;
+		}
+
+		.coursework__rank-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+		}
+
+		.coursework__rank-icon {
+			font-size: 3rem;
+			color: var(--first-color);
+			margin-bottom: var(--mb-1);
+		}
+
+		.coursework__rank-value {
+			font-size: 2.5rem;
+			font-weight: var(--font-semi-bold);
+			color: var(--title-color);
+			margin-bottom: var(--mb-0-5);
+		}
+
+		.coursework__rank-label {
+			font-size: var(--small-font-size);
+			color: var(--text-color-light);
+		}
+
+		.coursework__rank-visual {
+			margin-top: 1rem;
+			height: 8px;
+			background: var(--body-color);
+			border-radius: 4px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.coursework__rank-progress {
+			height: 100%;
+			background: linear-gradient(90deg, var(--first-color), var(--first-color-alt));
+			border-radius: 4px;
+			width: 0;
+			transition: width 1.5s ease;
+			position: relative;
+		}
+
+		.coursework__rank-progress::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 12px;
+			height: 12px;
+			background: var(--first-color);
+			border-radius: 50%;
+			box-shadow: 0 0 8px var(--first-color);
+		}
+
+		.coursework__achievements {
+			max-width: 1200px;
+			margin: var(--mb-3) auto;
+			background: var(--container-color);
+			border-radius: 1rem;
+			padding: 2rem;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+			opacity: 0;
+			transform: translateY(20px);
+			transition: all 0.6s ease;
+		}
+
+		.coursework__achievements.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.coursework__achievements-title {
+			font-size: var(--h2-font-size);
+			color: var(--title-color);
+			margin-bottom: var(--mb-2);
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			text-align: center;
+			justify-content: center;
+		}
+
+		.coursework__achievements-title i {
+			color: var(--first-color);
+			font-size: 1.5rem;
+		}
+
+		.coursework__scholarships {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 1.5rem;
+			margin-top: var(--mb-2);
+		}
+
+		.coursework__scholarship-card {
+			background: var(--body-color);
+			padding: 1.5rem;
+			border-radius: 0.75rem;
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.coursework__scholarship-card::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 4px;
+			background: var(--first-color);
+			transform: scaleY(0);
+			transition: transform 0.3s ease;
+		}
+
+		.coursework__scholarship-card:hover::before {
+			transform: scaleY(1);
+		}
+
+		.coursework__scholarship-card:hover {
+			transform: translateX(5px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		}
+
+		.coursework__scholarship-icon {
+			font-size: 2.5rem;
+			color: var(--first-color);
+			flex-shrink: 0;
+		}
+
+		.coursework__scholarship-content {
+			flex: 1;
+		}
+
+		.coursework__scholarship-year {
+			font-size: var(--small-font-size);
+			color: var(--text-color-light);
+			margin-bottom: 0.25rem;
+		}
+
+		.coursework__scholarship-name {
+			font-size: var(--normal-font-size);
+			font-weight: var(--font-medium);
+			color: var(--title-color);
+		}
+
+		.coursework__motto {
+			max-width: 800px;
+			margin: var(--mb-3) auto;
+			padding: 2.5rem;
+			background: var(--container-color);
+			border: 2px solid var(--first-color-lighter);
+			border-radius: 1rem;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+			position: relative;
+			opacity: 0;
+			transform: translateY(20px);
+			transition: all 0.6s ease;
+			text-align: center;
+			overflow: hidden;
+		}
+
+		.coursework__motto:hover {
+			border-color: var(--first-color);
+			box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+		}
+
+		.coursework__motto::before {
+			content: '"';
+			position: absolute;
+			top: -20px;
+			left: 20px;
+			font-size: 8rem;
+			color: var(--first-color);
+			opacity: 0.1;
+			font-family: serif;
+			line-height: 1;
+		}
+
+		.coursework__motto::after {
+			content: '"';
+			position: absolute;
+			bottom: -40px;
+			right: 20px;
+			font-size: 8rem;
+			color: var(--first-color);
+			opacity: 0.1;
+			font-family: serif;
+			line-height: 1;
+		}
+
+		.coursework__motto.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.coursework__motto-text {
+			font-size: var(--h3-font-size);
+			color: var(--title-color);
+			line-height: 1.8;
+			font-style: italic;
+			position: relative;
+			z-index: 1;
+			font-weight: var(--font-medium);
+		}
+
+		.coursework__motto-label {
+			margin-top: var(--mb-1);
+			font-size: var(--small-font-size);
+			color: var(--text-color-light);
+			position: relative;
+			z-index: 1;
+		}
+
+		.coursework__stat-card {
+			background: var(--container-color);
+			padding: 2rem;
+			border-radius: 1rem;
+			text-align: center;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+			transition: all 0.3s ease;
+			opacity: 0;
+			transform: translateY(20px);
+		}
+
+		.coursework__stat-card.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.coursework__stat-card:nth-child(1) {
+			transition-delay: 0.1s;
+		}
+
+		.coursework__stat-card:nth-child(2) {
+			transition-delay: 0.2s;
+		}
+
+		.coursework__stat-card:nth-child(3) {
+			transition-delay: 0.3s;
+		}
+
+		.coursework__stat-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+		}
+
+		.coursework__stat-icon {
+			font-size: 3rem;
+			color: var(--first-color);
+			margin-bottom: var(--mb-1);
+		}
+
+		.coursework__stat-value {
+			font-size: 2.5rem;
+			font-weight: var(--font-semi-bold);
+			color: var(--title-color);
+			margin-bottom: var(--mb-0-5);
+		}
+
+		.coursework__stat-label {
+			font-size: var(--small-font-size);
+			color: var(--text-color-light);
+		}
+
+		@media screen and (max-width: 768px) {
+			.coursework__table-content {
+				grid-template-columns: 1fr;
+			}
+
+			.coursework__table-column:not(:last-child) {
+				border-right: none;
+				border-bottom: 1px solid var(--text-color-light);
+				opacity: 0.1;
+				padding-bottom: 1.5rem;
+				margin-bottom: 1.5rem;
+			}
+
+			.coursework__stats {
+				grid-template-columns: 1fr;
+			}
+
+			.coursework__scholarships {
+				grid-template-columns: 1fr;
+			}
+
+			.coursework__motto {
+				padding: 2rem 1.5rem;
+			}
+
+			.coursework__motto-text {
+				font-size: var(--normal-font-size);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!--==================== HEADER ====================-->
+	<header class="header scroll-header" id="header">
+		<!-- Navigation bar will be loaded dynamically by navbar.js -->
+	</header>
+
+	<!--==================== MAIN ====================-->
+	<main class="main">
+		<!--==================== COURSEWORK ====================-->
+		<section class="portfolio section" id="portfolio">
+			<h2 class="section__title" i18n="portfolio__title">Coursework</h2>
+			<span class="section__subtitle" i18n="portfolio__subtitle">Academic Courses & Learning</span>
+
+			<!-- Introduction Section -->
+			<div class="coursework__intro">
+				<p class="coursework__intro-text">
+					This section showcases my academic coursework and learning experiences throughout my studies.
+					Below are the course grades from the previous academic year, demonstrating my performance in
+					professional courses and my commitment to academic excellence.
+				</p>
+			</div>
+
+			<!-- Statistics Cards -->
+			<div class="coursework__stats">
+				<div class="coursework__stat-card">
+					<i class="uil uil-book-open coursework__stat-icon"></i>
+					<div class="coursework__stat-value" data-target="10">0</div>
+					<div class="coursework__stat-label">Courses Listed</div>
+				</div>
+				<div class="coursework__stat-card">
+					<i class="uil uil-award coursework__stat-icon"></i>
+					<div class="coursework__stat-value" data-target="83">0</div>
+					<div class="coursework__stat-label">Average Score</div>
+				</div>
+				<div class="coursework__stat-card">
+					<i class="uil uil-star coursework__stat-icon"></i>
+					<div class="coursework__stat-value" data-target="8">0</div>
+					<div class="coursework__stat-label">Grade A+ Courses</div>
+				</div>
+				<div class="coursework__rank-card">
+					<i class="uil uil-trophy coursework__rank-icon"></i>
+					<div class="coursework__rank-value">
+						<span id="rank-current">18</span>/<span id="rank-total">60</span>
+					</div>
+					<div class="coursework__rank-label">Overall Ranking</div>
+					<div class="coursework__rank-visual">
+						<div class="coursework__rank-progress" data-percent="30"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Achievements Section -->
+			<div class="coursework__achievements">
+				<h3 class="coursework__achievements-title">
+					<i class="uil uil-medal"></i> Scholarships
+				</h3>
+				<div class="coursework__scholarships">
+					<div class="coursework__scholarship-card">
+						<i class="uil uil-award-alt coursework__scholarship-icon"></i>
+						<div class="coursework__scholarship-content">
+							<div class="coursework__scholarship-year">2024</div>
+							<div class="coursework__scholarship-name">People's Scholarship</div>
+						</div>
+					</div>
+					<div class="coursework__scholarship-card">
+						<i class="uil uil-award-alt coursework__scholarship-icon"></i>
+						<div class="coursework__scholarship-content">
+							<div class="coursework__scholarship-year">2025</div>
+							<div class="coursework__scholarship-name">People's Scholarship</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Motto Section -->
+			<div class="coursework__motto">
+				<p class="coursework__motto-text">
+					When the time comes, I will ride the wind and break the waves, and set my cloud-white sail to cross
+					the sea.
+				</p>
+				<div class="coursework__motto-label">— Personal Motto —</div>
+			</div>
+
+			<!-- Grades Table -->
+			<div class="coursework__grades-container container">
+				<div class="coursework__grades-table">
+					<div class="coursework__table-header">
+						<h3><i class="uil uil-clipboard-notes"></i> Previous Academic Year Performance</h3>
+					</div>
+					<div class="coursework__table-content">
+						<div class="coursework__table-column">
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">General Physics (II)</span>
+								<span class="coursework__grade-score">90</span>
+							</div>
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">Principles of Material and Energy Balance</span>
+								<span class="coursework__grade-score">93</span>
+							</div>
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">Chemical Engineering Thermodynamics</span>
+								<span class="coursework__grade-score">85</span>
+							</div>
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">Colloid and Interface Science</span>
+								<span class="coursework__grade-score">89</span>
+							</div>
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">Organic Chemistry</span>
+								<span class="coursework__grade-score">90</span>
+							</div>
+						</div>
+						<div class="coursework__table-column">
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">Inorganic Chemistry</span>
+								<span class="coursework__grade-score">94</span>
+							</div>
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">Biochemistry Experiment</span>
+								<span class="coursework__grade-score">93</span>
+							</div>
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">Differential Equations</span>
+								<span class="coursework__grade-score">92</span>
+							</div>
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">Computational Methods</span>
+								<span class="coursework__grade-score">90</span>
+							</div>
+							<div class="coursework__grade-row">
+								<span class="coursework__course-name">Physical Chemistry (II)</span>
+								<span class="coursework__grade-score">87</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Self Assessment -->
+				<div class="coursework__assessment">
+					<h3 class="coursework__assessment-title">
+						<i class="uil uil-user-check"></i> Self Assessment
+					</h3>
+					<p class="coursework__assessment-text">
+						In my studies, I have always been diligent, hardworking, and assiduous. Although there are some
+						shortcomings in my overall grades, I have consistently maintained excellent results in my
+						professional
+						courses, with multiple professional course grades above A. This reflects my strong foundation in
+						biological engineering and my commitment to academic excellence in my field of study.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!--==================== FOOTER ====================-->
+	<footer class="footer" id="contact">
+		<div class="footer__bg">
+			<div class="footer__container container grid">
+				<div>
+					<h1 class="footer__title">Guanlin Wang</h1>
+					<span class="footer__subtitle" i18n="home__subtitle">Bachelor of Engineering in Biological
+						Engineering</span>
+				</div>
+
+				<div>
+					<ul class="footer__links">
+						<li>
+							<a href="index.html" class="footer__link" i18n="home">Home</a>
+						</li>
+						<li>
+							<a href="about.html" class="footer__link" i18n="about">Resume</a>
+						</li>
+						<li>
+							<a href="coursework.html" class="footer__link" i18n="portfolio">Coursework</a>
+						</li>
+						<li>
+							<a href="academic.html" class="footer__link" i18n="portfolio">Academic</a>
+						</li>
+						<li>
+							<a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
+						</li>
+						<li>
+							<a href="activities.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
+						</li>
+					</ul>
+
+					<div class="footer__contact">
+						<div class="footer__contact-information">
+							<i class="uil uil-phone-alt footer__contact-icon"></i>
+							<div class="footer__contact-info">
+								<h3 class="footer__contact-title" i18n="tel">Call me</h3>
+								<span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
+							</div>
+						</div>
+
+						<div class="footer__contact-information">
+							<i class="uil uil-envelope footer__contact-icon"></i>
+							<div class="footer__contact-info">
+								<h3 class="footer__contact-title" i18n="email">E-mail</h3>
+								<span class="footer__contact-subtitle"
+									i18n="email__address">wgl1162682844@163.com</span>
+							</div>
+						</div>
+
+						<div class="footer__contact-information">
+							<i class="uil uil-map-marker footer__contact-icon"></i>
+							<div class="footer__contact-info">
+								<h3 class="footer__contact-title" i18n="location">Location</h3>
+								<span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="footer__copy">
+				&#169; Guanlin Wang.Copy from
+				<a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank"
+					rel="noopener">Bedimcode</a>
+			</p>
+		</div>
+	</footer>
+
+	<!--==================== SCROLL TOP ====================-->
+	<a href="#" class="scrollup" id="scroll-up">
+		<i class="uil uil-arrow-up scrollup__icon"></i>
+	</a>
+	<!--==================== SWIPER JS ====================-->
+	<script src="assets/js/swiper-bundle.min.js"></script>
+
+	<!-- iconfont JS -->
+	<script src="assets/js/iconfont.js"></script>
+	<!-- jquery -->
+	<script src="assets/js/jquery2.1.4.min.js"></script>
+	<script src="assets/js/jquery.i18n.min.js"></script>
+	<!--==================== NAVBAR JS ====================-->
+	<script src="assets/js/navbar.js"></script>
+	<!--==================== MAIN JS ====================-->
+	<script src="assets/js/main.js"></script>
+	<!--==================== COURSEWORK JS ====================-->
+	<script>
+		// Intersection Observer for animations
+		const observerOptions = {
+			threshold: 0.1,
+			rootMargin: '0px 0px -50px 0px'
+		};
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+					// Animate grade rows
+					if (entry.target.classList.contains('coursework__grades-table')) {
+						const rows = entry.target.querySelectorAll('.coursework__grade-row');
+						rows.forEach((row, index) => {
+							setTimeout(() => {
+								row.classList.add('visible');
+							}, index * 100);
+						});
+					}
+				}
+			});
+		}, observerOptions);
+
+		// Observe elements
+		document.addEventListener('DOMContentLoaded', () => {
+			const elementsToObserve = document.querySelectorAll('.coursework__grades-table, .coursework__assessment, .coursework__stat-card, .coursework__rank-card, .coursework__achievements, .coursework__motto');
+			elementsToObserve.forEach(el => observer.observe(el));
+
+			// Animate statistics
+			const statValues = document.querySelectorAll('.coursework__stat-value');
+			statValues.forEach(stat => {
+				const target = parseInt(stat.getAttribute('data-target'));
+				const duration = 2000;
+				const increment = target / (duration / 16);
+				let current = 0;
+
+				const updateStat = () => {
+					current += increment;
+					if (current < target) {
+						stat.textContent = Math.floor(current);
+						requestAnimationFrame(updateStat);
+					} else {
+						stat.textContent = target;
+					}
+				};
+
+				// Start animation when element is visible
+				const statObserver = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							updateStat();
+							statObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.5 });
+
+				statObserver.observe(stat.parentElement);
+			});
+
+			// Animate rank progress bar
+			const rankProgress = document.querySelector('.coursework__rank-progress');
+			if (rankProgress) {
+				const rankObserver = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							const percent = parseFloat(entry.target.getAttribute('data-percent'));
+							setTimeout(() => {
+								entry.target.style.width = percent + '%';
+							}, 500);
+							rankObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.5 });
+				rankObserver.observe(rankProgress);
+			}
+
+			// Animate rank number
+			const rankCurrent = document.getElementById('rank-current');
+			if (rankCurrent) {
+				const rankCard = rankCurrent.closest('.coursework__rank-card');
+				const rankObserver = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							const target = 18;
+							const duration = 1500;
+							const increment = target / (duration / 16);
+							let current = 0;
+
+							const updateRank = () => {
+								current += increment;
+								if (current < target) {
+									rankCurrent.textContent = Math.floor(current);
+									requestAnimationFrame(updateRank);
+								} else {
+									rankCurrent.textContent = target;
+								}
+							};
+							updateRank();
+							rankObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.5 });
+				rankObserver.observe(rankCard);
+			}
+
+			// Animate scholarship cards on scroll
+			const scholarshipCards = document.querySelectorAll('.coursework__scholarship-card');
+			scholarshipCards.forEach((card, index) => {
+				card.style.opacity = '0';
+				card.style.transform = 'translateX(-20px)';
+				card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+			});
+
+			const achievementsSection = document.querySelector('.coursework__achievements');
+			if (achievementsSection) {
+				const achievementsObserver = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							scholarshipCards.forEach(card => {
+								card.style.opacity = '1';
+								card.style.transform = 'translateX(0)';
+							});
+							achievementsObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.3 });
+				achievementsObserver.observe(achievementsSection);
+			}
+		});
+	</script>
+</body>
+
+</html>

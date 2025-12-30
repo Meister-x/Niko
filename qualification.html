@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-		<!--==================== UNICONS 图标====================-->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<!--==================== UNICONS 图标====================-->
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
-		<!--==================== SWIPER CSS ====================-->
-		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-		
-		<!--==================== CSS ====================-->
-		<link rel="stylesheet" href="assets/css/styles.css" />
-		<!-- iconfont font class 方式引用图标 -->
-		<!-- <link
+	<!--==================== SWIPER CSS ====================-->
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+	<!--==================== CSS ====================-->
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<!-- iconfont font class 方式引用图标 -->
+	<!-- <link
 		  rel="stylesheet"
 		  href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
 		/> -->
-		<title>Future plan</title>
-		<style>
-		    * {
-		        margin: 0;
-		        padding: 0;
-		        /* box-sizing: border-box; */
-		    }
-		
-		    .main {
-		        width: 100vw;
-		        height: 100vh;
-		        display: flex;
-		        position: relative;
-		        overflow: hidden;
-		    }
-		
+	<title>Future plan</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			/* box-sizing: border-box; */
+		}
+
+		.main {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			position: relative;
+			overflow: hidden;
+		}
+
 		.nav-button {
 			width: 60px;
 			height: 60px;
-		        position: absolute;
-		        z-index: 999;
+			position: absolute;
+			z-index: 999;
 			background: var(--first-color);
 			border: none;
 			border-radius: 50%;
@@ -67,14 +67,14 @@
 				height: 50px;
 				font-size: 1.5rem;
 			}
-		    }
-		
+		}
+
 		#prev-btn {
 			left: 2%;
 			top: 50%;
 			transform: translateY(-50%);
-		    }
-		
+		}
+
 		#next-btn {
 			right: calc(50% - 5%);
 			top: 50%;
@@ -89,15 +89,15 @@
 			#next-btn {
 				right: calc(55% - 5%);
 			}
-		    }
-		
-		    #content {
+		}
+
+		#content {
 			width: 35%;
-		        height: 100%;
-		        position: absolute;
+			height: 100%;
+			position: absolute;
 			left: 12%;
-		        overflow: hidden;
-		    }
+			overflow: hidden;
+		}
 
 		@media(max-width:1000px) {
 			#content {
@@ -105,38 +105,38 @@
 				left: 10%;
 			}
 		}
-		
-		    .card {
-		        width: 100%;
-		        height: 100%;
-		        display: flex;
-		        flex-direction: column;
+
+		.card {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
 			justify-content: flex-start;
 			padding-top: 2rem;
-		        color: #5053fc;
-		        transition: transform .8s ease-in-out;
+			color: #5053fc;
+			transition: transform .8s ease-in-out;
 			overflow-y: auto;
-		    }
-		
-		    .card-time {
+		}
+
+		.card-time {
 			font-size: 36px;
-		        font-weight: 700;
+			font-weight: 700;
 			margin-bottom: 1rem;
 			color: #5053fc;
-		    }
-		
-		    .card-title {
+		}
+
+		.card-title {
 			font-size: 42px;
-		        font-weight: 500;
+			font-weight: 500;
 			padding-bottom: 15px;
 			border-bottom: 2px solid rgba(80, 83, 252, 0.3);
 			margin-bottom: 1.5rem;
 			line-height: 1.2;
-		    }
-		
-		    .card-passage {
+		}
+
+		.card-passage {
 			font-size: 18px;
-		        font-weight: 300;
+			font-weight: 300;
 			line-height: 1.8;
 			padding-right: 1rem;
 		}
@@ -174,141 +174,82 @@
 			color: var(--text-color);
 			line-height: 1.8;
 			text-align: center;
-		    }
-		
-		    #clock {
-		        height: 130%;
-		        /* 纵横比为1:1 */
-		        aspect-ratio: 1 / 1;
-		        position: absolute;
-		        right: -28%;
-		        top: -15%;
-		        border-radius: 50%;
-		        background-color: white;
-		        border: #ff9214 30px solid;
-		    }
-		
-		    @media(max-width:1000px) {
-		        #clock {
-		            right: -90%;
-		        }
-		    }
-		
-		    #clock-table {
-		        width: 96%;
-		        height: 96%;
-		        border-radius: 50%;
-		        position: absolute;
-		        top: 2%;
-		        left: 2%;
-		        transition: transform .8s ease-in-out;
-		    }
-		
-		    .invisible-table {
-		        width: 100%;
-		        height: 100%;
-		        border-radius: 50%;
-		        transform-origin: 50% 50%;
-		        position: absolute;
-		    }
-		
-		    .clock-thick {
-		        width: 6%;
-		        height: 6px;
-		        background-color: #5053fc;
-		        position: absolute;
-		        top: calc(50% - 3px);
-		        left: 0px;
-		    }
-		
-		    .clock-thick span {
-		        font-size: 50px;
-		        position: absolute;
-		        left: 140%;
-		        top: calc(50% - 30px);
-		        color: #5053fc;
-		    }
-		
-		    .clock-scale {
-		        width: 4%;
-		        height: 2px;
-		        background-color: #5053fc;
-		        position: absolute;
-		        top: calc(50% - .5px);
-		        left: 0px;
-		    }
-		</style>
-	</head>
+		}
 
-	<body>
-		<!--==================== HEADER ====================-->
-		<header class="header scroll-header" id="header">
-		  <nav class="nav container">
-		    <a href="#" class="nav__logo">Guanlin Wang</a>
-		    <div class="nav__menu" id="nav-menu">
-		      <ul class="nav__list grid">
-		        <li class="nav__item">
-		          <a href="index.html" class="nav__link">
-		            <i class="uil uil-book nav__icon"></i>
-		            <p i18n="home">Home</p>
-		          </a>
-		        </li>
-		        <li class="nav__item">
-		          <a href="about.html" class="nav__link">
-		            <i class="uil uil-file-alt nav__icon"></i>
-		            <p i18n="about">Resume</p>
-		          </a>
-		        </li>
-					<li class="nav__item nav__item--dropdown">
-						<a href="#" class="nav__link">
-		            <i class="uil uil-book nav__icon"></i>
-		            <p i18n="portfolio">Coursework</p>
-							<i class="uil uil-angle-down nav__dropdown-icon"></i>
-		          </a>
-						<ul class="nav__dropdown">
-							<li><a href="competitions.html"><i class="uil uil-trophy"></i> Competitions</a></li>
-							<li><a href="lab-projects.html"><i class="uil uil-flask"></i> Laboratory Projects</a></li>
-						</ul>
-		        </li>
-		        <li class="nav__item">
-		          <a href="qualification.html" class="nav__link">
-		            <i class="uil uil-rocket nav__icon"></i>
-		            <p i18n="qualification">Future Plan</p>
-		          </a>
-		        </li>
-					<li class="nav__item nav__item--dropdown">
-						<a href="#" class="nav__link">
-		            <i class="uil uil-smile nav__icon"></i>
-		            <p i18n="activities">Activities & Hobby</p>
-							<i class="uil uil-angle-down nav__dropdown-icon"></i>
-		          </a>
-						<ul class="nav__dropdown">
-							<li><a href="experiment.html"><i class="uil uil-flask"></i> Experiment</a></li>
-							<li><a href="sn.html"><i class="uil uil-mountains"></i> Sports & Nature</a></li>
-							<li><a href="cs.html"><i class="uil uil-game"></i> Counter Strike</a></li>
-						</ul>
-		        </li>
-		        <li class="nav__item">
-		          <a href="#contact" class="nav__link">
-		            <i class="uil uil-smile nav__icon"></i>
-		            <p i18n="contact">Contact me</p>
-		          </a>
-		        </li>
-		      </ul>
-		    </div>
-		    <div class="nav__btns">
-		      <i class="uil uil-moon change-theme" id="theme-button"></i>
-		      <div class="nav__toggle" id="nav-toggle">
-		        <i class="uil uil-apps"></i>
-		      </div>
-		    </div>
-		  </nav>
-		</header>
-		<!--==================== QUALIFICATION ====================-->
-		      <section class="qualification section" id="qualification">
-		        <h2 class="section__title" i18n="qualification__title">
-		          Future plan
-		        </h2>
+		#clock {
+			height: 130%;
+			/* 纵横比为1:1 */
+			aspect-ratio: 1 / 1;
+			position: absolute;
+			right: -28%;
+			top: -15%;
+			border-radius: 50%;
+			background-color: white;
+			border: #ff9214 30px solid;
+		}
+
+		@media(max-width:1000px) {
+			#clock {
+				right: -90%;
+			}
+		}
+
+		#clock-table {
+			width: 96%;
+			height: 96%;
+			border-radius: 50%;
+			position: absolute;
+			top: 2%;
+			left: 2%;
+			transition: transform .8s ease-in-out;
+		}
+
+		.invisible-table {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			transform-origin: 50% 50%;
+			position: absolute;
+		}
+
+		.clock-thick {
+			width: 6%;
+			height: 6px;
+			background-color: #5053fc;
+			position: absolute;
+			top: calc(50% - 3px);
+			left: 0px;
+		}
+
+		.clock-thick span {
+			font-size: 50px;
+			position: absolute;
+			left: 140%;
+			top: calc(50% - 30px);
+			color: #5053fc;
+		}
+
+		.clock-scale {
+			width: 4%;
+			height: 2px;
+			background-color: #5053fc;
+			position: absolute;
+			top: calc(50% - .5px);
+			left: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--==================== HEADER ====================-->
+	<header class="header scroll-header" id="header">
+		<!-- Navigation bar will be loaded dynamically by navbar.js -->
+	</header>
+	<!--==================== QUALIFICATION ====================-->
+	<section class="qualification section" id="qualification">
+		<h2 class="section__title" i18n="qualification__title">
+			Future plan
+		</h2>
 		<span class="section__subtitle" i18n="qualification__subtitle">My personal journey</span>
 
 		<!-- Introduction Section -->
@@ -330,93 +271,82 @@
 			<button class="nav-button" id="next-btn" onclick="slideToNext()" aria-label="Next timeline card">
 				<i class="uil uil-angle-right"></i>
 			</button>
-		    <div id="content">
-		        <div class="card">
-		            <div class="card-time">
+			<div id="content">
+				<div class="card">
+					<div class="card-time">
 						2023 - 2027
-		            </div>
-		            <div class="card-title">
-		                Beijing University of Chemical Technology
-		            </div>
-		            <div class="card-passage">
-		                <br>
+					</div>
+					<div class="card-title">
+						Beijing University of Chemical Technology
+					</div>
+					<div class="card-passage">
+						<br>
 						<strong>Degree:</strong> Bachelor of Engineering in Biological Engineering
 						<br>
 						<strong>Focus Areas:</strong> Bioprocess Engineering, Synthetic Biology, Biotechnology
 						<br>
 						<br>
-						During my four-year undergraduate studies, I am building a solid foundation in biological
-						engineering
-						principles, laboratory techniques, and research methodologies. I actively participate in iGEM
-						competitions,
-						laboratory research projects, and academic collaborations to enhance my practical skills and
-						theoretical knowledge.
-		                <br>
-		                <br>
+						Building a solid foundation in biological engineering principles, laboratory techniques, and
+						research methodologies.
+						Actively participating in iGEM competitions and laboratory research projects.
+						<br>
+						<br>
 						<strong>Key Achievements:</strong>
 						<br>
-						• Participated in multiple iGEM competitions (2025, 2026)
+						• iGEM competitions (2025, 2026)
 						<br>
-						• Conducted research in nasal mucosa moisturizing spray development
+						• Nasal mucosa moisturizing spray R&D
 						<br>
-						• Engaged in brown rice yeast screening and GABA metabolism research
-		            </div>
-		        </div>
-		        <div class="card">
-		            <div class="card-time">
+						• Yeast screening and GABA metabolism research
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-time">
 						2026 - 2027
-		            </div>
-		            <div class="card-title">
+					</div>
+					<div class="card-title">
 						ESF (SUNY College of Environmental Science and Forestry)
-		            </div>
-		            <div class="card-passage">
-		                <br>
+					</div>
+					<div class="card-passage">
+						<br>
 						<strong>Program:</strong> Sino-Foreign Cooperation Project, Bioprocess Engineering
 						<br>
 						<strong>Location:</strong> Syracuse, New York, United States
 						<br>
 						<br>
-						In my final year of undergraduate studies, I will participate in an international exchange
-						program at ESF,
-						one of the premier institutions for environmental science and forestry research. This experience
-						will provide
-						me with global perspectives on bioprocess engineering, exposure to cutting-edge research
-						methodologies, and
-						cross-cultural academic collaboration opportunities.
-		                <br>
-		                <br>
+						Participating in an international exchange program at ESF. Gaining global perspectives on
+						bioprocess engineering
+						and exposure to cutting-edge research methodologies.
+						<br>
+						<br>
 						<strong>Goals:</strong>
 						<br>
-						• Gain international research experience and broaden academic horizons
+						• International research experience
 						<br>
-						• Develop cross-cultural communication and collaboration skills
+						• Cross-cultural collaboration skills
 						<br>
-						• Explore advanced bioprocess engineering techniques and applications
+						• Advanced bioprocess engineering techniques
 						<br>
-						• Build professional networks in the international scientific community
-		            </div>
-		        </div>
-		        <div class="card">
-		            <div class="card-time">
+						• Professional networks in international scientific community
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-time">
 						2027 - 2033
-		            </div>
-		            <div class="card-title">
+					</div>
+					<div class="card-title">
 						Johns Hopkins University (JHU)
-		            </div>
-		            <div class="card-passage">
-		                <br>
+					</div>
+					<div class="card-passage">
+						<br>
 						<strong>Program:</strong> Master's and Ph.D. in Biomedical Engineering
 						<br>
 						<strong>Location:</strong> Baltimore, Maryland, United States
 						<br>
 						<br>
-						Johns Hopkins University has been my dream institution since I began my academic journey. As a
-						world-renowned
-						leader in biomedical engineering and medical research, JHU offers unparalleled opportunities for
-						advanced study
-						and groundbreaking research. I plan to pursue both my Master's and Ph.D. degrees here, focusing
-						on the intersection
-						of biological engineering and medical applications.
+						Pursuing advanced degrees at Johns Hopkins University, focusing on the intersection of
+						biological engineering
+						and medical applications.
 						<br>
 						<br>
 						<strong>Research Interests:</strong>
@@ -428,77 +358,56 @@
 						• Biomedical device development
 						<br>
 						• Regenerative medicine and stem cell engineering
-		                <br>
-		                <br>
-						<strong>Career Preparation:</strong>
-						<br>
-						• Develop expertise in cutting-edge biomedical technologies
-						<br>
-						• Contribute to translational research bridging laboratory and clinical applications
-						<br>
-						• Build a strong foundation for a research career in biomedical engineering
-		            </div>
-		        </div>
-		        <div class="card">
-		            <div class="card-time">
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-time">
 						2033 - Future
-		            </div>
-		            <div class="card-title">
-		                Institute of Biology, Chinese Academy of Sciences
-		            </div>
-		            <div class="card-passage">
-		                <br>
+					</div>
+					<div class="card-title">
+						Institute of Biology, Chinese Academy of Sciences
+					</div>
+					<div class="card-passage">
+						<br>
 						<strong>Position:</strong> Research Scientist / Principal Investigator
 						<br>
 						<strong>Research Focus:</strong> Biomedical Engineering or Fermentation Engineering
 						<br>
 						<br>
-						The Institute of Biology at the Chinese Academy of Sciences represents the pinnacle of
-						scientific research in China.
-						This is where I envision beginning my long-term research career, contributing to the advancement
-						of biological sciences
-						and addressing critical challenges in healthcare, biotechnology, and sustainable development.
+						Beginning my long-term research career at the Institute of Biology, Chinese Academy of Sciences,
+						contributing to the advancement of biological sciences and addressing critical challenges in
+						healthcare,
+						biotechnology, and sustainable development.
 						<br>
 						<br>
 						<strong>Research Vision:</strong>
 						<br>
-						• Develop innovative biomedical solutions for unmet medical needs
+						• Innovative biomedical solutions for unmet medical needs
 						<br>
-						• Advance bioprocess engineering for sustainable industrial applications
+						• Bioprocess engineering for sustainable applications
 						<br>
 						• Bridge fundamental research and practical applications
 						<br>
 						• Mentor the next generation of scientists and engineers
-		                <br>
-		                <br>
-						<strong>Long-term Goals:</strong>
-						<br>
-						• Lead independent research programs with significant scientific impact
-						<br>
-						• Collaborate with international research institutions
-						<br>
-						• Translate research findings into practical applications benefiting society
-						<br>
-						• Contribute to China's leadership in biological sciences and biotechnology
-		            </div>
-		        </div>
-		    </div>
-		
-		    <div id="clock">
-		        <div id="clock-center"></div>
-		        <div id="clock-pointer"></div>
-		        <div id="clock-table"></div>
-		    </div>
+					</div>
+				</div>
+			</div>
+
+			<div id="clock">
+				<div id="clock-center"></div>
+				<div id="clock-pointer"></div>
+				<div id="clock-table"></div>
+			</div>
 		</div>
 		<script>
-		    // 定义变量
-		    let offset = 0;
-		    let maxOffset = 0;
-		    let minOffset = -3;
-		    // 获取所有卡片元素并存储在数组中
-		    const slides = Array.from(document.querySelectorAll(".card"));
-		    // 获取时钟表盘元素
-		    const clock = document.querySelector("#clock-table");
+			// 定义变量
+			let offset = 0;
+			let maxOffset = 0;
+			let minOffset = -3;
+			// 获取所有卡片元素并存储在数组中
+			const slides = Array.from(document.querySelectorAll(".card"));
+			// 获取时钟表盘元素
+			const clock = document.querySelector("#clock-table");
 			// 每个卡片对应的时间范围（用于显示标签）
 			const timeRanges = [
 				{ label: '2023-2027' },  // Beijing University
@@ -519,58 +428,58 @@
 			timeRanges.forEach((range, index) => {
 				if (index < cardDegrees.length) {
 					addThickClockScale(cardDegrees[index], range.label);
-		        }
+				}
 			});
-		    // 添加时钟刻度
-		    function addClockScale(degree) {
-		        // 创建一个隐藏的表格元素
-		        const invisibleClockTable = document.createElement("div");
-		        // 添加类名
-		        invisibleClockTable.className = "invisible-table";
-		        // 设置旋转角度
-		        invisibleClockTable.style.transform = `rotate(${degree}deg)`;
-		        // 创建时钟刻度元素
-		        const clockScale = document.createElement("div");
-		        // 添加类名
-		        clockScale.className = "clock-scale";
-		        // 将时钟刻度元素添加到表格中
-		        invisibleClockTable.appendChild(clockScale);
-		        // 将表格添加到时钟表盘中
-		        clock.appendChild(invisibleClockTable);
-		    }
-		    // 添加粗刻度
-		    function addThickClockScale(degree, time) {
-		        // 创建一个隐藏的表格元素
-		        const invisibleClockTable = document.createElement("div");
-		        invisibleClockTable.className = "invisible-table";
-		        invisibleClockTable.style.transform = `rotate(${degree}deg)`;
-		        const thickClockScale = document.createElement("div");
-		        thickClockScale.className = "clock-thick";
-		        const scaleContent = document.createElement("span");
-		        scaleContent.textContent = `${time}`;
-		        thickClockScale.appendChild(scaleContent);
-		        invisibleClockTable.appendChild(thickClockScale);
-		        clock.appendChild(invisibleClockTable);
-		    }
+			// 添加时钟刻度
+			function addClockScale(degree) {
+				// 创建一个隐藏的表格元素
+				const invisibleClockTable = document.createElement("div");
+				// 添加类名
+				invisibleClockTable.className = "invisible-table";
+				// 设置旋转角度
+				invisibleClockTable.style.transform = `rotate(${degree}deg)`;
+				// 创建时钟刻度元素
+				const clockScale = document.createElement("div");
+				// 添加类名
+				clockScale.className = "clock-scale";
+				// 将时钟刻度元素添加到表格中
+				invisibleClockTable.appendChild(clockScale);
+				// 将表格添加到时钟表盘中
+				clock.appendChild(invisibleClockTable);
+			}
+			// 添加粗刻度
+			function addThickClockScale(degree, time) {
+				// 创建一个隐藏的表格元素
+				const invisibleClockTable = document.createElement("div");
+				invisibleClockTable.className = "invisible-table";
+				invisibleClockTable.style.transform = `rotate(${degree}deg)`;
+				const thickClockScale = document.createElement("div");
+				thickClockScale.className = "clock-thick";
+				const scaleContent = document.createElement("span");
+				scaleContent.textContent = `${time}`;
+				thickClockScale.appendChild(scaleContent);
+				invisibleClockTable.appendChild(thickClockScale);
+				clock.appendChild(invisibleClockTable);
+			}
 			// 向前切换卡片（左按钮）
-		    function slideToPrev() {
-		        // 更新偏移量，取最大值
-		        offset = Math.min(maxOffset, offset + 1);
-		        slides.forEach(slide => {
-		            // 根据偏移量设置卡片垂直偏移效果
-		            slide.style.transform = `translateY(${offset * 100}%)`;
-		        });
+			function slideToPrev() {
+				// 更新偏移量，取最大值
+				offset = Math.min(maxOffset, offset + 1);
+				slides.forEach(slide => {
+					// 根据偏移量设置卡片垂直偏移效果
+					slide.style.transform = `translateY(${offset * 100}%)`;
+				});
 				// 调用旋转时钟表盘函数，根据当前卡片索引计算角度
 				const currentIndex = Math.abs(offset);
 				updateClockRotation(currentIndex);
-		    }
+			}
 
 			// 向后切换卡片（右按钮）
-		    function slideToNext() {
-		        offset = Math.max(minOffset, offset - 1);
-		        slides.forEach(slide => {
-		            slide.style.transform = `translateY(${offset * 100}%)`;
-		        });
+			function slideToNext() {
+				offset = Math.max(minOffset, offset - 1);
+				slides.forEach(slide => {
+					slide.style.transform = `translateY(${offset * 100}%)`;
+				});
 				// 调用旋转时钟表盘函数，根据当前卡片索引计算角度
 				const currentIndex = Math.abs(offset);
 				updateClockRotation(currentIndex);
@@ -582,92 +491,107 @@
 					const degree = cardDegrees[cardIndex];
 					clockRotate(degree);
 				}
-		    }
-		    // 旋转时钟表盘
-		    function clockRotate(degree) {
-		        // 根据角度旋转时钟表盘
-		        clock.style.transform = `rotate(${degree}deg)`;
-		    }
+			}
+			// 旋转时钟表盘
+			function clockRotate(degree) {
+				// 根据角度旋转时钟表盘
+				clock.style.transform = `rotate(${degree}deg)`;
+			}
 		</script>
 
 		<!--==================== FOOTER ====================-->
 		<footer class="footer" id="contact">
-		  <div class="footer__bg">
-		    <div class="footer__container container grid">
-		      <div>
-		        <h1 class="footer__title">Guanlin Wang</h1>
+			<div class="footer__bg">
+				<div class="footer__container container grid">
+					<div>
+						<h1 class="footer__title">Guanlin Wang</h1>
 						<span class="footer__subtitle" i18n="home__subtitle">Bachelor of Engineering in Biological
 							Engineering</span>
-		      </div>
+					</div>
 
-      <div>
-        <ul class="footer__links">
-          <li>
-            <a href="index.html" class="footer__link" i18n="home">Home</a>
-          </li>
-          <li>
-            <a href="about.html" class="footer__link" i18n="about">Resume</a>
-          </li>
-          <li>
-								<a href="competitions.html" class="footer__link" i18n="portfolio">Coursework</a>
-          </li>
-          <li>
-            <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
-          </li>
-          <li>
+					<div>
+						<ul class="footer__links">
+							<li>
+								<a href="index.html" class="footer__link" i18n="home">Home</a>
+							</li>
+							<li>
+								<a href="about.html" class="footer__link" i18n="about">Resume</a>
+							</li>
+							<li>
+								<a href="coursework.html" class="footer__link" i18n="portfolio">Coursework</a>
+							</li>
+							<li>
+								<a href="academic.html" class="footer__link" i18n="portfolio">Academic</a>
+							</li>
+							<li>
+								<a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
+							</li>
+							<li>
 								<a href="experiment.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
-          </li>
-        </ul>
-        
-        <div class="footer__contact">
-          <div class="footer__contact-information">
-            <i class="uil uil-phone-alt footer__contact-icon"></i>
-            <div class="footer__contact-info">
-              <h3 class="footer__contact-title" i18n="tel">Call me</h3>
-              <span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
-            </div>
-          </div>
+							</li>
+						</ul>
 
-          <div class="footer__contact-information">
-            <i class="uil uil-envelope footer__contact-icon"></i>
-            <div class="footer__contact-info">
-              <h3 class="footer__contact-title" i18n="email">E-mail</h3>
+						<div class="footer__contact">
+							<div class="footer__contact-information">
+								<i class="uil uil-phone-alt footer__contact-icon"></i>
+								<div class="footer__contact-info">
+									<h3 class="footer__contact-title" i18n="tel">Call me</h3>
+									<span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
+								</div>
+							</div>
+
+							<div class="footer__contact-information">
+								<i class="uil uil-envelope footer__contact-icon"></i>
+								<div class="footer__contact-info">
+									<h3 class="footer__contact-title" i18n="email">E-mail</h3>
 									<span class="footer__contact-subtitle"
 										i18n="email__address">wgl1162682844@163.com</span>
-            </div>
-          </div>
+								</div>
+							</div>
 
-          <div class="footer__contact-information">
-            <i class="uil uil-map-marker footer__contact-icon"></i>
-            <div class="footer__contact-info">
-              <h3 class="footer__contact-title" i18n="location">Location</h3>
-              <span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-		    <p class="footer__copy">
-		      &#169; Guanlin Wang.Copy from
+							<div class="footer__contact-information">
+								<i class="uil uil-map-marker footer__contact-icon"></i>
+								<div class="footer__contact-info">
+									<h3 class="footer__contact-title" i18n="location">Location</h3>
+									<span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="footer__copy">
+					&#169; Guanlin Wang.Copy from
 					<a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
-		    </p>
-		  </div>
+				</p>
+			</div>
 		</footer>
 
 		<!--==================== SCROLL TOP ====================-->
 		<a href="#" class="scrollup" id="scroll-up">
-		  <i class="uil uil-arrow-up scrollup__icon"></i>
+			<i class="uil uil-arrow-up scrollup__icon"></i>
 		</a>
 		<!--==================== SWIPER JS ====================-->
 		<script src="assets/js/swiper-bundle.min.js"></script>
-		
+
 		<!-- iconfont JS -->
 		<script src="assets/js/iconfont.js"></script>
 		<!-- jquery -->
 		<script src="assets/js/jquery2.1.4.min.js"></script>
 		<script src="assets/js/jquery.i18n.min.js"></script>
+		<!--==================== NAVBAR JS ====================-->
+		<script src="assets/js/navbar.js"></script>
 		<!--==================== MAIN JS ====================-->
 		<script src="assets/js/main.js"></script>
-	</body>
+</body>
+
+</html>
+<!--==================== MAIN JS ====================-->
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
+<!--==================== MAIN JS ====================-->
+<script src="assets/js/main.js"></script>
+</body>
 
 </html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!--==================== UNICONS 图标====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- iconfont font class 方式引用图标 -->
+    <!-- <link
+		  rel="stylesheet"
+		  href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
+		/> -->
+    <title>Sports</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header scroll-header" id="header">
+        <!-- Navigation bar will be loaded dynamically by navbar.js -->
+    </header>
+
+    <!-- Activity Introduction Box -->
+    <div class="activity-intro">
+        <h2 class="activity-intro__title">
+            <i class="uil uil-basketball"></i> Sports
+        </h2>
+        <p class="activity-intro__text">
+            Physical activity and sports are essential pillars of my life balance. On weekdays, I actively engage
+            in various sports and outdoor activities, which not only strengthen my body but also elevate my spirit
+            and clear my mind. Whether it's playing basketball with friends, badminton matches, or other
+            competitive activities, these moments provide crucial balance to academic pressure.
+        </p>
+        <p class="activity-intro__text">
+            Sports teach me teamwork, perseverance, and the joy of healthy competition. The camaraderie built on
+            the court or field extends beyond the game, creating lasting friendships and memories. Every weekend,
+            I look forward to these athletic pursuits that recharge my energy and maintain my physical and mental
+            well-being.
+        </p>
+    </div>
+
+    <div class="activity-container">
+        <div id="slide">
+            <div class="item" style="background-image: url(8.jpg);">
+                <div class="content">
+                    <div class="name">Sports</div>
+                    <div class="des">Every weekend, I have a thrilling basketball game with my brothers</div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(11.jpg);">
+                <div class="content">
+                    <div class="name">Sports</div>
+                    <div class="des">Every weekend, I make an appointment with my good friends to play a badminton match
+                        at the venue</div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev" aria-label="Previous slide"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next" aria-label="Next slide"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer" id="contact">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Guanlin Wang</h1>
+                    <span class="footer__subtitle" i18n="home__subtitle">Bachelor of Engineering in Biological
+                        Engineering</span>
+                </div>
+
+                <div>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="index.html" class="footer__link" i18n="home">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="footer__link" i18n="about">Resume</a>
+                        </li>
+                        <li>
+                            <a href="coursework.html" class="footer__link" i18n="portfolio">Coursework</a>
+                        </li>
+                        <li>
+                            <a href="academic.html" class="footer__link" i18n="portfolio">Academic</a>
+                        </li>
+                        <li>
+                            <a href="qualification.html" class="footer__link" i18n="qualification">Future plan</a>
+                        </li>
+                        <li>
+                            <a href="activities.html" class="footer__link" i18n="activities">Activities ＆ Hobby</a>
+                        </li>
+                    </ul>
+
+                    <div class="footer__contact">
+                        <div class="footer__contact-information">
+                            <i class="uil uil-phone-alt footer__contact-icon"></i>
+                            <div class="footer__contact-info">
+                                <h3 class="footer__contact-title" i18n="tel">Call me</h3>
+                                <span class="footer__contact-subtitle" i18n="tel__number">(+86) 156 3779 3163</span>
+                            </div>
+                        </div>
+
+                        <div class="footer__contact-information">
+                            <i class="uil uil-envelope footer__contact-icon"></i>
+                            <div class="footer__contact-info">
+                                <h3 class="footer__contact-title" i18n="email">E-mail</h3>
+                                <span class="footer__contact-subtitle"
+                                    i18n="email__address">wgl1162682844@163.com</span>
+                            </div>
+                        </div>
+
+                        <div class="footer__contact-information">
+                            <i class="uil uil-map-marker footer__contact-icon"></i>
+                            <div class="footer__contact-info">
+                                <h3 class="footer__contact-title" i18n="location">Location</h3>
+                                <span class="footer__contact-subtitle" i18n="location__detail">Beijing , CHN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="footer__copy">
+                &#169; Guanlin Wang.Copy from
+                <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- iconfont JS -->
+    <script src="assets/js/iconfont.js"></script>
+    <!-- jquery -->
+    <script src="assets/js/jquery2.1.4.min.js"></script>
+    <script src="assets/js/jquery.i18n.min.js"></script>
+    <!--==================== NAVBAR JS ====================-->
+    <script src="assets/js/navbar.js"></script>
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
